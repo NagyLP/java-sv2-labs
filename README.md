@@ -1,2 +1,2 @@
 # java-sv2-labs
-BackEnd Alapképzés
+Java SE alapok - Java nyelvi elemek
