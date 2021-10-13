@@ -24,7 +24,7 @@ public class ClientMain {
         System.out.println("Rögzített lakcím: " + KLiens.getAddress());
         System.out.println();
 //Változás-felülírás
-    System.out.println("Elfelejtettük, hogy megváltozott a címe, eddig. Futólépésben kérem az új címet:");
+    System.out.println("Köszönöm. Szombat AM 09:00-kor a címen van az egész cég házavatót tartani. Na jó, kérem az új címet: ");
         KLiens.migrate(scanner.nextLine());
         System.out.println();
         System.out.println("Módosult lakcím: " + KLiens.getAddress() + " <- erre.");
