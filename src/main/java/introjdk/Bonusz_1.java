@@ -5,6 +5,6 @@ public class Bonusz_1 {
         System.out.println();
         System.out.println("Visszafejtés:");
         System.out.println("- Parancssorban: Javap *.class.");
-        System.out.println("- IDEA funkciójával: O-mait, mint egy jó segéd. Bal-kattintás az osztályra.");
+        System.out.println("- IDEA funkciójával: O-matic, mint egy jó segéd. Bal-kattintás az osztályra.");
     }
 }
