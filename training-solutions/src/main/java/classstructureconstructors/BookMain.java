@@ -7,7 +7,7 @@ public class BookMain {
     public static void main(String[] args) {
         Scanner scanner = new Scanner (System.in);
 
-        Book book1 = new Book ();
+        Book book1 = new Book("Joseph Heller", "Catch-22", 1);
           System.out.println("Kérem, adja meg a könyv szerzőjét: ");
             book1.setAuthor(scanner.nextLine());
           System.out.println("Kérem, adja meg a könyv címét: ");
