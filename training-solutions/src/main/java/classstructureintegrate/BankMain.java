@@ -25,7 +25,6 @@ public class BankMain {
 
         System.out.println("Kérem a számláról kifizetni kívánt summát: ");
         bankAccount.withdraw(scanner.nextInt());
-        System.out.println("Áll a pot: "+bankAccount);
-
+        System.out.println("Áll a pot: "+bankAccount.getInfo());
     }
 }
