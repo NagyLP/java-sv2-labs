@@ -4,7 +4,7 @@ public class Store {
 
     private String pRoduct;
     private int sTock;
-    private int quantity;
+    private int qUantity;
 
     public Store (String product, int sTock) {
             this.pRoduct = product;
@@ -20,10 +20,10 @@ public class Store {
     public void setsTock(int sTock) {
         this.sTock = sTock;}
 
-    public void store (int quantity) {this.quantity = quantity;
-        sTock = sTock + this.quantity;
+    public void store (int quantity) {this.qUantity = quantity;
+        sTock = sTock + this.qUantity;
     }
-    public void dispatch (int quantity) {this.quantity = quantity;
-        sTock = sTock - quantity;
+    public void dispatch (int quantity) {this.qUantity = quantity;
+        sTock = sTock - qUantity;
     }
 }

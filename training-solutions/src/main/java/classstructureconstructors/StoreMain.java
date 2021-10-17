@@ -41,10 +41,12 @@ public class StoreMain {
     // ok TERMÉK 2.:
             System.out.println("Kérem a " +storageRubberducK.getpRoduct()+ "-Raktárba elraktározni kívánt mennyiséget: ");
                 storageRubberducK.store(scanner.nextInt());
-        System.out.println(storageRubberdoG.getpRoduct()+" termékből a jelenlegi készlet: " +storageRubberdoG.getsTock()+ " valami mennyiségi egység");
         System.out.println();
-        System.out.println("Kérem a " +storageRubberdoG.getpRoduct()+ "-Raktárból kivételezni kívánt mennyiséget: "  );
-        storageRubberdoG.dispatch(scanner.nextInt());
-        System.out.println("A " +storageRubberdoG.getpRoduct()+ "-Raktárban tárolt " +storageRubberdoG.getpRoduct()+ " megnevezésű termék jelenlegi készlete: " +storageRubberdoG.getsTock()+ " db");
+        System.out.println(storageRubberducK.getpRoduct()+" termékből a jelenlegi készlet: " +storageRubberducK.getsTock()+ " valami mennyiségi egység");
+        System.out.println();
+        System.out.println("Kérem a " +storageRubberducK.getpRoduct()+ "-Raktárból kivételezni kívánt mennyiséget: "  );
+        storageRubberducK.dispatch(scanner.nextInt());
+        System.out.println();
+        System.out.println("A " +storageRubberducK.getpRoduct()+ "-Raktárban tárolt " +storageRubberducK.getpRoduct()+ " megnevezésű termék jelenlegi készlete: " +storageRubberducK.getsTock()+ " db");
     }
 }
