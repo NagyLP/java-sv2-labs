@@ -7,12 +7,12 @@ a bonyolultabb típusokat fogjátok alapszinten megismerni.
 
 * [X] [Kódolási könvenciók videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709797-kodolasi-konvenciok)
 * [X] Kódolási könvenciók gyakorlati feladat
-* [ ] [Literálok és lokális változók videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709851-literalok-es-lokalis-valtozok)
-* [ ] Literálok és lokális változók gyakorlati feladat
-* [ ] [Kifejezések és utasítások videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709849-kifejezesek-es-utasitasok)
-* [ ] Kifejezések és utasítások gyakorlati feladat
-* [ ] [Csomagok videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709796-csomagok)
-* [ ] Csomagok gyakorlati feladat
+* [X] [Literálok és lokális változók videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709851-literalok-es-lokalis-valtozok)
+* [X] Literálok és lokális változók gyakorlati feladat
+* [X] [Kifejezések és utasítások videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709849-kifejezesek-es-utasitasok)
+* [X] Kifejezések és utasítások gyakorlati feladat
+* [X] [Csomagok videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709796-csomagok)
+* [X] Csomagok gyakorlati feladat
 * [ ] [Java API videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709757-java-api)
 * [ ] Java API gyakorlati feladat
 * [ ] [JAR állomány videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709835-jar-allomany)
@@ -54,10 +54,10 @@ a bonyolultabb típusokat fogjátok alapszinten megismerni.
 ## Konzultációk
 
 * [X] 2021-10-18 konzultáció részvétel/videó
-* [ ] 2021-10-18 konzultáció gyakorlati feladat
-* [ ] 2021-10-19 konzultáció részvétel/videó
-* [ ] 2021-10-19 konzultáció gyakorlati feladat
-* [ ] 2021-10-21 konzultáció részvétel/videó
-* [ ] 2021-10-21 konzultáció gyakorlati feladat
+* [X] 2021-10-18 konzultáció gyakorlati feladat
+* [X] 2021-10-19 konzultáció részvétel/videó
+* [X] 2021-10-19 konzultáció gyakorlati feladat
+* [X] 2021-10-21 konzultáció részvétel/videó
+* [X] 2021-10-21 konzultáció gyakorlati feladat
 * [ ] 2021-10-22 konzultáció részvétel/videó
 * [ ] 2021-10-22 konzultáció gyakorlati feladat
