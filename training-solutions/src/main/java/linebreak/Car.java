@@ -1,5 +1,7 @@
 package linebreak;
 
+import java.time.LocalTime;
+
 public class Car {
         public String getBrandAndTypeInSperarateLines(String brand, String type) {
             return brand +"\n"+ type ;}
@@ -9,4 +11,3 @@ public class Car {
             System.out.println(car.getBrandAndTypeInSperarateLines("Aston Martin", "Heritage"));
     }
 }
-
