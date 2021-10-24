@@ -1,6 +1,7 @@
 package looptypesmodify;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class LanguageSchool {
@@ -32,6 +33,6 @@ public class LanguageSchool {
         }
         students.removeAll(studentsClean);
         System.out.println(students.size());
-        System.out.println(students.toString());
+
     }
 }
