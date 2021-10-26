@@ -33,6 +33,7 @@ public class LanguageSchool {
         }
         students.removeAll(studentsClean);
         System.out.println(students.size());
-        System.out.println(students.toString());
+        System.out.println(students);
+        System.out.println(students);
     }
 }

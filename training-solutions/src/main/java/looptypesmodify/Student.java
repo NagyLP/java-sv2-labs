@@ -10,6 +10,10 @@ public class Student {
         this.active = true;
     }
 
+    public String toString() {
+        return "Név: " +name;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
