@@ -1,9 +1,7 @@
 package intromethods.registration;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.Scanner;
-import java.util.SortedMap;
 
 public class Registration {
 
@@ -37,5 +35,4 @@ public class Registration {
         Person person1 = new Person(registration.getNamePlus(firstname, lastninja), registration.getBirthDatePlus(year,month, day),email);
         System.out.println(person1.toString());
     }
-
 }
