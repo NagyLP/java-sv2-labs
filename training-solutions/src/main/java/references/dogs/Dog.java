@@ -2,9 +2,9 @@ package references.dogs;
 
 public class Dog {
 
-    public String name;
-    public int age;
-    public String clour;
+    private String name;
+    private int age;
+    private String clour;
 
     public Dog(String name, int age, String clour) {
         this.name = name;
