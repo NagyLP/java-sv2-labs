@@ -31,14 +31,14 @@ a típusokról, az operátorokról, valamint a szöveges típusról.
 * [X] [Felsorolásos típus videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709804-felsorolasos-tipus)
 * [X] Felsorolásos típus gyakorlati feladat
 * [X] [Operátorok videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709858-operatorok)
-* [ ] Operátorok gyakorlati feladat 
-* [ ] Oszthatóság vizsgálata gyakorlati feladat [(Szöveges anyag itt)](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/texts/28278683-oszthatosag-vizsgalata)
-* [ ] [Egész és lebegőpontos számok videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709854-egesz-es-lebegopontos-szamok)
-* [ ] Egész és lebegőpontos számok gyakorlati feladat
-* [ ] [Típuskonverzió videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709762-tipuskonverzio)
-* [ ] Típuskonverzió gyakorlati feladat
-* [ ] [Konverziók videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/27993726-konverziok)
-* [ ] Konverziók gyakorlati feladat
+* [X] Operátorok gyakorlati feladat 
+* [X] Oszthatóság vizsgálata gyakorlati feladat [(Szöveges anyag itt)](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/texts/28278683-oszthatosag-vizsgalata)
+* [X] [Egész és lebegőpontos számok videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709854-egesz-es-lebegopontos-szamok)
+* [X] Egész és lebegőpontos számok gyakorlati feladat
+* [X] [Típuskonverzió videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709762-tipuskonverzio)
+* [X] Típuskonverzió gyakorlati feladat
+* [X] [Konverziók videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/27993726-konverziok)
+* [X] Konverziók gyakorlati feladat
 
 ## Részletesen a szöveges típusról
 

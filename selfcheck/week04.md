@@ -5,7 +5,7 @@ fogtok tanulni a vezérlési szerkezetekről.
 
 ## Unit tesztelés JUnittal
 
-* [ ] [Unit tesztelés JUnit 4 használatával videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709855-unit-teszteles-junit-4-hasznalataval)
+* [X] [Unit tesztelés JUnit 4 használatával videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709855-unit-teszteles-junit-4-hasznalataval)
 * [ ] [JUnit 5 videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/17606488-junit-5)
 * [ ] JUnit 5 gyakorlati feladat
 * [ ] [JUnit 5 assert metódusok videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/28177547-junit-5-assert-metodusok)
