@@ -1,5 +1,7 @@
 package enumtype.firstenum;
 
+import java.util.Arrays;
+
 public enum Coin {
 
     TOWOHUNDRED(200), HUNDRED(100), TWENTY(20), TEN(10), FIVE(5);
@@ -12,9 +14,9 @@ public enum Coin {
         }
 
     public String toString(int value) {
-        return "Coin{" +
-                "value=" + this.value +
-                '}';
+        return this.ordinal() +". számon: "
+                +this.name() +" néven ; "
+                +this.value +" értéken";
     }
 
     public int getValue() {

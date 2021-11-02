@@ -37,5 +37,5 @@ System.out.println();
         System.out.print(coin_HNDR.name()+"\n");
 // LEKÉRÉS: SorSzám - ordinal()
         System.out.println(coin_HNDR.ordinal());
-    }
+        }
 }
