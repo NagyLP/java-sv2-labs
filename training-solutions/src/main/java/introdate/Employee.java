@@ -6,8 +6,8 @@ import java.time.LocalDateTime;
 public class Employee {
 
     private String name;
-    private LocalDate dateOfBirth;
-    private LocalDateTime beginEmployment;
+    private final LocalDate dateOfBirth;
+    private final LocalDateTime beginEmployment;
 
     public Employee (int year, int month, int day, String name) {
         this.dateOfBirth = LocalDate.of(year,month, day);

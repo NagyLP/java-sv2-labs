@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Exam {
 
-    private List<Person> examPersonList = new ArrayList<>();
+    private final List<Person> examPersonList = new ArrayList<>();
 
     public void addPerson (Person person) {examPersonList.add(person);}
 

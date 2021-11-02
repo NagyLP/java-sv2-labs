@@ -5,8 +5,8 @@ import java.time.LocalDateTime;
 
 public class Person {
 
-    private String name;
-    private LocalDate dateOfBirth;
+    private final String name;
+    private final LocalDate dateOfBirth;
     String email;
 
     public Person(String name, LocalDate dateOfBirth, String email) {

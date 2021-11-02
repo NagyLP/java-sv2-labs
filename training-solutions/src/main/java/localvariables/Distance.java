@@ -2,8 +2,8 @@ package localvariables;
 
 public class Distance {
 
-    private double distancelnKM;
-    private boolean exacT;
+    private final double distancelnKM;
+    private final boolean exacT;
 
     public Distance (double distancelnKM, boolean exact) {
         this.distancelnKM = distancelnKM;

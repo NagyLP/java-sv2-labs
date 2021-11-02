@@ -5,8 +5,8 @@ import java.time.LocalDateTime;
 
 public class CyclingTour {
 
-    private String description;
-    private LocalDate startTime;
+    private final String description;
+    private final LocalDate startTime;
     private int numberOfPeople;
     private double kms;
 

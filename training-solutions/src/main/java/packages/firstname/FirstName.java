@@ -1,7 +1,7 @@
 package packages.firstname;
 
 public class FirstName {
-    private String first;
+    private final String first;
 
     public FirstName (String first) {
         this.first = first;

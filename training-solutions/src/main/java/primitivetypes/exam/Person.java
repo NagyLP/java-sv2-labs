@@ -4,10 +4,10 @@ import java.time.LocalDate;
 
 public class Person {
 
-    private String name;
-    private LocalDate birthDate;
-    private int postNumber;
-    private double average;
+    private final String name;
+    private final LocalDate birthDate;
+    private final int postNumber;
+    private final double average;
 
     public Person(String name, LocalDate birthDate, int postNumber, double average) {
         this.name = name;

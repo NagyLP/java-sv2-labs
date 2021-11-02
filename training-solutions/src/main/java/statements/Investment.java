@@ -2,9 +2,9 @@ package statements;
 
 public class Investment {
 
-    private double cost  = 0.3;
-    private int fund;
-    private int interestRate;
+    private final double cost  = 0.3;
+    private final int fund;
+    private final int interestRate;
     private boolean active = true;
 
     public Investment (int funD, int interestRatE) {

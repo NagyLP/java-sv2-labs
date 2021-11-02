@@ -2,7 +2,7 @@ package classstructureintegrate;
 
 public class Product {
 
-    private String NAme;
+    private final String NAme;
     private int PRice;
 
     public Product(String name, int price) {

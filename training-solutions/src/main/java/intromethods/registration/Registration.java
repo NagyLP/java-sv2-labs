@@ -33,6 +33,6 @@ public class Registration {
         System.out.println("\n Gratulálunk! A következő (kamu)adatokkal regisztrált:\n");
         Person person1 = new Person(registration.getNamePlus(firstname, lastninja), registration.getBirthDatePlus(year,month, day),email);
 
-        System.out.println(person1.toString());
+        System.out.println(person1);
     }
 }

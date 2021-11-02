@@ -2,7 +2,7 @@ package packages.lastname;
 
 public class LastName {
 
-    private String lastname;
+    private final String lastname;
 
     public LastName (String lastname) {
         this.lastname = lastname;

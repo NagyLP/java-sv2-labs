@@ -3,7 +3,7 @@ package intromethods.employee;
 public class Employee {
 
     private String name;
-    private int hiringYear;
+    private final int hiringYear;
     private int salary;
 
     public Employee(String name, int hiringYear, int salary) {

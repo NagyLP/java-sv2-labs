@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Digits {
 
-    private List<Integer> numbersList = new ArrayList<>();
+    private final List<Integer> numbersList = new ArrayList<>();
 
     private void addDigitsToList(String text) {
         char[] transformers = text.toCharArray();
