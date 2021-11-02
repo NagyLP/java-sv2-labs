@@ -1,7 +1,5 @@
 package stringtype.registration;
 
-import statements.Investment;
-
 public class UserValidator {
 
     public boolean isValidUsername (String username) {

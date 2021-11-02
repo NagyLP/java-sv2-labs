@@ -1,10 +1,12 @@
 package enumtype.firstenum;
 
 import java.util.Arrays;
+import static enumtype.firstenum.Coin.HUNDRED;
+
 
 public class CoinMain {
     public static void main(String[] args) {
-    Coin coin_HNDR = Coin.HUNDRED;
+    Coin coin_HNDR = HUNDRED;
 
     for (Coin item: Coin.values()) {
         System.out.println(item);
