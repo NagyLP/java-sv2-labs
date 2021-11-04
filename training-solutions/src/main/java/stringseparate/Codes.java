@@ -13,7 +13,7 @@ public class Codes {
                 sb.append(item);
                 first = false;
             } else if (Character.isAlphabetic(item.charAt(0))) {
-                sb.append(item);
+                sb.append(", ").append(item);
             }
         }
         return sb.toString();
@@ -30,8 +30,6 @@ public class Codes {
         codestable.add("15876");
         codestable.add("58793");
 
-        codes.getCodesStart(codestable);
-        System.out.println(codestable.toString());
-
+        System.out.println(codes.getCodesStart(codestable));
     }
 }
