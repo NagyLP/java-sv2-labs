@@ -1,7 +1,7 @@
 package stringseparate;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+//import java.util.Arrays;
 import java.util.List;
 
 public class IceCream {
@@ -20,7 +20,7 @@ public class IceCream {
 
         for ( int i = 0; i < names.size(); i++) {
             if (i !=0) {
-                    sb.append(", ");
+               sb.append(", ");
             }
             sb.append(names.get(i));
         }
