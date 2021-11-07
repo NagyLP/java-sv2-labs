@@ -16,7 +16,7 @@ fogtok tanulni a vezérlési szerkezetekről.
 ## Vezérlési szerkezetek
 
 * [X] [Vezérlési szerkezetek és az elágazás videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709847-vezerlesi-szerkezetek-es-az-elagazas)
-* [ ] Vezérlési szerkezetek és az elágazás gyakorlati feladat
+* [X] Vezérlési szerkezetek és az elágazás gyakorlati feladat
 * [X] [Ciklusok videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709839-ciklusok)
 * [ ] Ciklusok gyakorlati feladat
 * [X] [Haladó vezérlési szerkezetek videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709794-halado-vezerlesi-szerkezetek)
