@@ -13,7 +13,8 @@ public class IntScanner {
             if (number > 100) {
                 sb.append(number);
                 sb.append(", ");
-        }}
+            }
+        }
         String reply = sb.toString();
         if (reply.length() == 0) {
             return reply;
