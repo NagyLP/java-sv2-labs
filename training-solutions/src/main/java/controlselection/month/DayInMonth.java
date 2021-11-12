@@ -2,6 +2,10 @@ package controlselection.month;
 
 public class DayInMonth {
 
+    private DayInMonth() {
+        throw new IllegalStateException("Utility class");
+    }
+
     public static int getNumberOfDayinMonth (int year, String month) {
         switch (month.trim().toLowerCase()) {
 
@@ -23,7 +27,7 @@ public class DayInMonth {
     }
 
     public static void main(String[] args) {
-        DayInMonth dayInMonth = new DayInMonth();
-        System.out.println(getNumberOfDayinMonth(2020, "február"));
+//        DayInMonth dayInMonth = new DayInMonth();
+        System.out.println(getNumberOfDayinMonth(2021, "február"));
     }
 }
