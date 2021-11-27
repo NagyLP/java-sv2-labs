@@ -32,7 +32,7 @@ public class Neptun {
         }
 
         List<String> codes = new ArrayList<>();
-        for (String item : codes) {
+        for (String item : namesAndCodes) {
             String[] temp = item.split("\n");
             codes.add(temp[0]);
         }
