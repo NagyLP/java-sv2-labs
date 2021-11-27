@@ -34,7 +34,7 @@ public class Neptun {
         List<String> codes = new ArrayList<>();
         for (String item : codes) {
             String[] temp = item.split("\n");
-            codes.add(temp[1]);
+            codes.add(temp[0]);
         }
         System.out.println(codes);
     }
