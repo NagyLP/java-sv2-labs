@@ -1,0 +1,3 @@
+Lenyomni a karaktereket.
+Majd az entert.
+Lehet irányokat, és Backspace"-t is használni, valami csak lesz belőle, ha karakterenként olvas a Scanner...
