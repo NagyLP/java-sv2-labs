@@ -11,7 +11,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class SalesAmountSumCalculatorTest {
 
     SalesAmountSumCalculator SASC_Test = new SalesAmountSumCalculator();
-    SalesAmountSumCalculator SASC_TestNull = null;
 
     @Test
     void testSumSalesRevenue() {
