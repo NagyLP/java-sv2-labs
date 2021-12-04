@@ -7,11 +7,11 @@ import static algorithmssum.TransactionOperation.CREDIT;
 public class TransactionSumCalculator {
 
     public int sumAmountOfCreditEntries(List<Transaction> transactions) {
-        int akkSum = 0;
+        int sumCreditAmount = 0;
         for (Transaction item : transactions) {
             if (item.getTransactionOperation() == CREDIT)
-                akkSum += item.getAmount();
+                sumCreditAmount += item.getAmount();
         }
-        return akkSum;
+        return sumCreditAmount;
     }
 }
