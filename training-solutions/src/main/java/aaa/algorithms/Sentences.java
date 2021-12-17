@@ -3,6 +3,9 @@ package aaa.algorithms;
 import java.util.ArrayList;
 import java.util.List;
 
+import static aaa.algorithms.Errors.*;
+
+
 public class Sentences {
 
     public static final String SEN_END_MARKS = ".?!";
@@ -10,13 +13,13 @@ public class Sentences {
 
     public void addSentence(String sentence) {
         switch (sentenceChecker(sentence)) {
-            case "UpperCase Error" -> throw new IllegalArgumentException("Sentence must start with capital!");
-            case "EndingMark Error" -> throw new IllegalArgumentException("Sentence must end with ending mark!");
-            case "Örülünk Vince" -> sentences.add(sentence);
+            case UPPER_CASE_ERROR -> throw new IllegalArgumentException("Sentence must start with capital!");
+            case ENDING_MARK_ERROR -> throw new IllegalArgumentException("Sentence must end with ending mark!");
+            case ADD_ITEM -> sentences.add(sentence);
         }
     }
 
-    public String findLongestSentence() throws IllegalArgumentException {
+    public String findLongestSentence() {
         try {
             String lenghtestSentence = sentences.get(0);
             for (String item : sentences) {
@@ -30,12 +33,12 @@ public class Sentences {
         }
     }
 
-    public static String sentenceChecker(String sentence) {
+    public static Errors sentenceChecker(String sentence) {
         if (sentence.charAt(0) != sentence.toUpperCase().charAt(0))
-            return "UpperCase Error";
+            return UPPER_CASE_ERROR;
         if (!SEN_END_MARKS.contains(Character.toString(sentence.charAt(sentence.length() - 1))))
-            return "EndingMark Error";
-        return "Örülünk Vince";
+            return ENDING_MARK_ERROR;
+        return ADD_ITEM;
     }
 
     public List<String> getSentences() {
