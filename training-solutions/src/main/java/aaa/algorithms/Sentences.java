@@ -13,8 +13,8 @@ public class Sentences {
 
     public void addSentence(String sentence) {
         switch (sentenceChecker(sentence)) {
-            case UPPER_CASE_ERROR -> throw new IllegalArgumentException("Sentence must start with capital!");
-            case ENDING_MARK_ERROR -> throw new IllegalArgumentException("Sentence must end with ending mark!");
+            case ERRORS_UPPER_CASE -> throw new IllegalArgumentException(String.valueOf(Errors.values()[1]));
+            case ERRORS_ENGING_MARK -> throw new IllegalArgumentException(String.valueOf(Errors.values()[2]));
             case ADD_ITEM -> sentences.add(sentence);
         }
     }
@@ -33,11 +33,11 @@ public class Sentences {
         }
     }
 
-    public static Errors sentenceChecker(String sentence) {
+    public Errors sentenceChecker(String sentence) {
         if (sentence.charAt(0) != sentence.toUpperCase().charAt(0))
-            return UPPER_CASE_ERROR;
+            return ERRORS_UPPER_CASE;
         if (!SEN_END_MARKS.contains(Character.toString(sentence.charAt(sentence.length() - 1))))
-            return ENDING_MARK_ERROR;
+            return ERRORS_ENGING_MARK;
         return ADD_ITEM;
     }
 
