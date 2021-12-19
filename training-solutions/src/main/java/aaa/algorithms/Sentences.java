@@ -13,7 +13,7 @@ public class Sentences {
 
     public void addSentence(String sentence) {
         switch (sentenceChecker(sentence)) {
-            case ERRORS_UPPER_CASE -> throw new IllegalArgumentException(String.valueOf(Errors.values()[1]));
+            case ERRORS_UPPER_CASE -> throw ERRORS_UPPER_CASE.getEXEPT(ERRORS_UPPER_CASE.getERROR_TEXT());
             case ERRORS_ENGING_MARK -> throw new IllegalArgumentException(String.valueOf(Errors.values()[2]));
             case ADD_ITEM -> sentences.add(sentence);
         }

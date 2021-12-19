@@ -1,10 +1,14 @@
-package methodstructure.bmi.pendrive;
+package methodstructure.pendrives;
 
 public class Pendrive {
 
     private String name;
     private int capacity;
     private int price;
+
+    public int comparePricePerCapacity(Pendrive other) {
+
+    }
 
     public String toString() {
         return String.format("Pendrive datas:\n" +
@@ -14,7 +18,7 @@ public class Pendrive {
     }
 
     public void risePrice(int percent) {
-        price *= (1 + percent / 100);
+        price *= (1 + percent / 100.0);
     }
 
     public String getName() {
