@@ -2,12 +2,26 @@ package methodstructure.pendrives;
 
 public class Pendrive {
 
-    private String name;
-    private int capacity;
+    private final String name;
+    private final int capacity;
     private int price;
 
-    public int comparePricePerCapacity(Pendrive other) {
+    public Pendrive(String name, int capacity, int price) {
+        this.name = name;
+        this.capacity = capacity;
+        this.price = price;
+    }
 
+    public int comparePricePerCapacity(Pendrive other) {
+        if (this.getPricePerCapacity() > other.getPricePerCapacity())
+            return 1;
+        if (this.getPricePerCapacity() < other.getPricePerCapacity())
+            return -1;
+        return 0;
+    }
+
+    public boolean isCheaperThan(Pendrive other) {
+        return this.price < other.price;
     }
 
     public String toString() {
@@ -19,6 +33,10 @@ public class Pendrive {
 
     public void risePrice(int percent) {
         price *= (1 + percent / 100.0);
+    }
+
+    public double getPricePerCapacity() {
+        return price / capacity;
     }
 
     public String getName() {

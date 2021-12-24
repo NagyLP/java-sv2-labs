@@ -13,8 +13,8 @@ public class Sentences {
 
     public void addSentence(String sentence) {
         switch (sentenceChecker(sentence)) {
-            case ERRORS_UPPER_CASE -> throw ERRORS_UPPER_CASE.getEXEPTION(ERRORS_UPPER_CASE.getERROR_TEXT());
-            case ERRORS_ENGING_MARK -> throw new IllegalArgumentException(Errors.values()[2].toString());
+            case ERRORS_UPPER_CASE -> throw new IllegalArgumentException(aaa.algorithms.Errors.values()[1].toString());
+            case ERRORS_ENGING_MARK -> throw new IllegalArgumentException(aaa.algorithms.Errors.values()[2].toString());
             case ADD_ITEM -> sentences.add(sentence);
         }
     }
@@ -33,7 +33,7 @@ public class Sentences {
         }
     }
 
-    public Errors sentenceChecker(String sentence) {
+    public aaa.algorithms.Errors sentenceChecker(String sentence) {
         if (sentence.charAt(0) != sentence.toUpperCase().charAt(0))
             return ERRORS_UPPER_CASE;
         if (!SEN_END_MARKS.contains(Character.toString(sentence.charAt(sentence.length() - 1))))
