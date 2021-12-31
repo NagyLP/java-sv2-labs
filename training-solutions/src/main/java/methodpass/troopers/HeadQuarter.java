@@ -32,12 +32,14 @@ public class HeadQuarter {
     }
 
     public Trooper findClosestTrooper(Position target) {
-        if (troopers.isEmpty())
+        if (troopers.isEmpty()) {
             throw new IllegalArgumentException("Troopers collection is empty.");
+        }
         Trooper closestTrooper = troopers.get(0);
         for (Trooper item : troopers) {
-            if (item.distanceFrom(target) < closestTrooper.distanceFrom(target))
+            if (item.distanceFrom(target) < closestTrooper.distanceFrom(target)) {
                 closestTrooper = item;
+            }
         }
         return closestTrooper;
     }
