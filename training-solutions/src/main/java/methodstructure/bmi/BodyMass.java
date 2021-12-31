@@ -38,4 +38,10 @@ public class BodyMass {
     public double getHeight() {
         return height;
     }
+
+    public static void main(String[] args) {
+        System.out.println(new BodyMass(62, 178).getBodyMassIndex());
+    }
 }
+
+

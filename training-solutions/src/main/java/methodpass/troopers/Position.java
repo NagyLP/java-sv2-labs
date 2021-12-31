@@ -2,37 +2,37 @@ package methodpass.troopers;
 
 public class Position {
 
-    private double posidtionX;
-    private double posidtionY;
+    private double posX;
+    private double posY;
 
-    public Position(double posidtionX, double posidtionY) {
-        this.posidtionX = posidtionX;
-        this.posidtionY = posidtionY;
+    public Position(double posX, double posY) {
+        this.posX = posX;
+        this.posY = posY;
     }
 
     public double distanceFrom(Position position) {
         try {
             return Math.sqrt(
-                    (Math.pow(this.posidtionX, position.posidtionX))
-                            - Math.pow(this.posidtionY, position.posidtionY));
+                    (Math.pow(this.posX, position.posX))
+                            - Math.pow(this.posY, position.posY));
         } catch (NullPointerException npe) {
-            throw new IllegalArgumentException("Sir. The object is fully shaded, leave the object, Sir. ", npe);
+            throw new IllegalArgumentException("Sir. The object is fully shielded, leave the object, Sir. ", npe);
         }
     }
 
-    public void setPosidtionX(double posidtionX) {
-        this.posidtionX = posidtionX;
+    public void setPosX(double posX) {
+        this.posX = posX;
     }
 
-    public void setPosidtionY(double posidtionY) {
-        this.posidtionY = posidtionY;
+    public void setPosY(double posY) {
+        this.posY = posY;
     }
 
-    public double getPosidtionX() {
-        return posidtionX;
+    public double getPosX() {
+        return posX;
     }
 
-    public double getPosidtionY() {
-        return posidtionY;
+    public double getPosY() {
+        return posY;
     }
 }
