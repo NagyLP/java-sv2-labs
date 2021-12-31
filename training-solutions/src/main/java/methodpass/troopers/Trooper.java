@@ -29,6 +29,9 @@ public class Trooper {
     }
 
     public double distanceFrom(Position target) {
+        if (target == null) {
+            throw new IllegalArgumentException("Target can at be null.");
+        }
         return this.position.distanceFrom(target);
     }
 }

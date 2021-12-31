@@ -25,20 +25,21 @@ public class HeadQuarter {
 
     public Trooper findTrooperByName(String name) {
         for (Trooper item : troopers) {
-            item.getName().equals(name);
+            if (item.getName().equals(name)) ;
             return item;
         }
-        throw new IllegalArgumentException("Invalid Trooper name.");
+        throw new IllegalArgumentException(String.format("Can I find trooper by name.", name));
     }
 
     public Trooper findClosestTrooper(Position target) {
+        if (troopers.isEmpty())
+            throw new IllegalArgumentException("Troopers collection is empty.");
         Trooper closestTrooper = troopers.get(0);
         for (Trooper item : troopers) {
             if (item.distanceFrom(target) < closestTrooper.distanceFrom(target))
                 closestTrooper = item;
-            return closestTrooper;
         }
-        throw new IllegalArgumentException("Target must not be null");
+        return closestTrooper;
     }
 
     public void moveTrooper(Trooper trooper, Position target) {
