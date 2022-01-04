@@ -38,8 +38,29 @@ public class Office {
     public void printMeetingRoomsWithName(String name) {
         for (MeetingRoom item : meetingRooms) {
             if (item.getName().equals(name)) {
-                System.out.println();
+                System.out.println(printDataOfMeetingRooms(item));
             }
         }
+    }
+
+    public void printMeetingRoomsContains(String part) {
+        for (MeetingRoom item : meetingRooms) {
+            if (item.getName().contains(part)) {
+                System.out.println(printDataOfMeetingRooms(item));
+            }
+        }
+    }
+
+    public void printAreasLargerThan(int area) {
+        for (MeetingRoom item : meetingRooms) {
+            if (item.getArea() > area) {
+                System.out.println(printDataOfMeetingRooms(item));
+            }
+        }
+    }
+
+    public String printDataOfMeetingRooms(MeetingRoom meetingRoom) {
+        return String.format("Tárgyaló neve: %s\n -hossza: %d\n -szélessége: %d\n -területe: %d",
+                meetingRoom.getName(), meetingRoom.getLength(), meetingRoom.getWidth(), meetingRoom.getArea());
     }
 }
