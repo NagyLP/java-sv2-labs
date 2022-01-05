@@ -93,8 +93,8 @@ public class MeetingRoomController {
                 office.printAreasLargerThan(Integer.parseInt(scan.nextLine()));
                 break;
             case 9:
-                System.out.println("\n Viszontlátásra... Shutdown Babe, shutdown.\n" +
-                        "(Jó, nem az absz.max. 10 év múlva történik meg, hanem Magad választhatod ki.)");
+                System.out.println("\n Köszönöm, hogy itt volt. Viszontlátásra... Shutdown Babe, shutdown.\n" +
+                        "(Jó, nem az absz.max. 10 év múlva történik majd meg, hanem Magad választhatod ki.)");
                 runtime.exec("shutdown -i");
                 terminated = true;
                 break;
@@ -102,6 +102,7 @@ public class MeetingRoomController {
                 System.out.println("Hol van ilyen menüszám? Ezért Fatal Error és shutdown lenne," +
                         "de most enter után újramenü lesz.");
                 scan.nextLine();
+                break;
         }
     }
 }
