@@ -12,10 +12,10 @@ public class MeetingRoomController {
     private final Runtime runtime = Runtime.getRuntime();
     private boolean terminated;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         MeetingRoomController controllerMeetingRoom = new MeetingRoomController();
         try {
-            while (controllerMeetingRoom.terminated)
+            while (!controllerMeetingRoom.terminated)
                 controllerMeetingRoom.runMenu();
         } catch (IOException ioe) {
             System.out.println("-= Exeption =- : " + ioe);
@@ -63,46 +63,45 @@ public class MeetingRoomController {
         }
 
         switch (selection) {
-            case 1 -> {
+            case 1:
                 readOffice();
-            }
-            case 2 -> {
+                break;
+            case 2:
                 office.printNames();
-            }
+                break;
 // MIÉRT NEM TALÁLJA A pause.exe-t. runtime.exec("pause"), mert nincs olyan *.exe.
 // Emlék: A command.com egyik internális (belső/beágyyazott) parancsa...
-            case 3 -> {
+            case 3:
                 office.printNamesReverse();
-            }
-            case 4 -> {
+                break;
+            case 4:
                 office.printEvenNames();
-            }
-            case 5 -> {
+                break;
+            case 5:
                 office.printAreas();
-            }
-            case 6 -> {
+                break;
+            case 6:
                 System.out.print("\nKérem a keresendő tárgyaló pontos nevét: ");
                 office.printMeetingRoomsWithName(scan.nextLine());
-            }
-            case 7 -> {
+                break;
+            case 7:
                 System.out.print("\nKérem a keresendő tárgyaló(k) névtöredékét: ");
                 office.printMeetingRoomsContains(scan.nextLine());
-            }
-            case 8 -> {
+                break;
+            case 8:
                 System.out.println("\nKérem a keresendő tárgyaló(k) legkisebb területét: ");
                 office.printAreasLargerThan(Integer.parseInt(scan.nextLine()));
-            }
-            case 9 -> {
-                System.out.println("\n Viszontlátásra... Main system shutdown." +
-                        "(Jó, nem az absz.max. 10 év múlva, hanem Magad választhatod ki.");
+                break;
+            case 9:
+                System.out.println("\n Viszontlátásra... Shutdown Babe, shutdown.\n" +
+                        "(Jó, nem az absz.max. 10 év múlva történik meg, hanem Magad választhatod ki.)");
                 runtime.exec("shutdown -i");
-                terminated = false;
-            }
-            default -> {
+                terminated = true;
+                break;
+            default:
                 System.out.println("Hol van ilyen menüszám? Ezért Fatal Error és shutdown lenne," +
                         "de most enter után újramenü lesz.");
                 scan.nextLine();
-            }
         }
     }
 }

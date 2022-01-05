@@ -6,7 +6,7 @@ import java.util.List;
 public class Office {
 
     // TALÁN LEHETNE interfész az "Iroda"//
-    //
+
     private final List<MeetingRoom> meetingRooms = new ArrayList<>();
 
     public void addMeetingRoom(MeetingRoom meetingRoom) {
@@ -15,19 +15,19 @@ public class Office {
 
     public void printNames() {
         for (MeetingRoom item : meetingRooms) {
-            System.out.println(item.getName());
+            System.out.println(printDataOfMeetingRooms(item));
         }
     }
 
     public void printNamesReverse() {
         for (int i = meetingRooms.size() - 1; i >= 0; i--) {
-            System.out.println(meetingRooms.get(i).getName());
+            System.out.println(printDataOfMeetingRooms(meetingRooms.get(i)));
         }
     }
 
     public void printEvenNames() {
         for (int i = 1; i <= meetingRooms.size() - 1; i += 2) {
-            System.out.println(meetingRooms.get(i).getName());
+            System.out.println(printDataOfMeetingRooms(meetingRooms.get(i)));
         }
     }
 
@@ -42,8 +42,9 @@ public class Office {
         for (MeetingRoom item : meetingRooms) {
             if (item.getName().equals(name)) {
                 System.out.println(printDataOfMeetingRooms(item));
+            } else {
+                System.out.println("Nem találtam a megadott \"" + name + "\" megnevezésű trágyalónevet.");
             }
-            System.out.println("Nem találtam a megadott \"" + name + "\" megnevezésű trágyalónevet.");
         }
     }
 
@@ -52,8 +53,9 @@ public class Office {
         for (MeetingRoom item : meetingRooms) {
             if (item.getName().toLowerCase().contains(part.toLowerCase())) {
                 System.out.println(printDataOfMeetingRooms(item));
+            } else {
+                System.out.println("Nem találtam a megadott \"" + part + "\" névtöredéket tartalmazó tárgyalónevet.");
             }
-            System.out.println("Nem találtam a megadott \"" + part + "\" névtöredéket tartalmazó tárgyalónevet.");
         }
     }
 
@@ -62,8 +64,9 @@ public class Office {
         for (MeetingRoom item : meetingRooms) {
             if (item.getArea() > area) {
                 System.out.println(printDataOfMeetingRooms(item));
+            } else {
+                System.out.println("Nincs a megadott \"" + area + "\" méretűnél nagyobb területű tárgyaló.");
             }
-            System.out.println("Nincs a megadott \"" + area + "\" méretűnél nagyobb területű tárgyaló.");
         }
     }
 
