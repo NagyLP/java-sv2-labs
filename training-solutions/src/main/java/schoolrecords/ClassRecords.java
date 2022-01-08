@@ -27,7 +27,8 @@ public class ClassRecords {
         if (students == null) {
             throw new NullPointerException("Student list (Class) must not be null. Error data: " + student);
         }
-        if (students.contains(student)) {
+// L Á M
+        if (students.toString().contains(student.getName())) {
             return false;
         }
         students.add(student);
@@ -38,7 +39,7 @@ public class ClassRecords {
         if (!addStudent(student)) {
             throw new NullPointerException("Non-existent class. The class is null. Error data: " + student);
         }
-        if (!students.contains(student)) {
+        if (!students.toString().contains(student.getName())) {
             return false;
         }
         students.remove(student);
@@ -47,7 +48,7 @@ public class ClassRecords {
 
     public double calculateClassAverage() {
         if (students.isEmpty()) {
-            throw new ArithmeticException("Aborted! Zero student, the class is empty. Error data: " + students.size());
+            throw new ArithmeticException("No student in the class, average calculation aborted!");
         }
         int classPieceOfMarks = 0;
         double classAmountOfMarks = 0;
@@ -58,7 +59,7 @@ public class ClassRecords {
         if (classAmountOfMarks == 0) {
             throw new ArithmeticException("No marks present, average calculation aborted!");
         }
-        return classAmountOfMarks / classPieceOfMarks;
+        return Math.floor(classAmountOfMarks / classPieceOfMarks * 100) / 100;
     }
 
     public double calculateClassAverageBySubject(Subject subject) {
@@ -74,7 +75,7 @@ public class ClassRecords {
         if (classAmountOfMarks == 0) {
             throw new ArithmeticException("No marks present, average calculation aborted!");
         }
-        return classAmountOfMarks / classPieceOfMarks;
+        return Math.floor(classAmountOfMarks / classPieceOfMarks * 100) / 100;
     }
 
     public Student findStudentByName(String name) {

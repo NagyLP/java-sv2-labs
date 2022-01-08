@@ -24,7 +24,7 @@ public class Mark {
 
     @Override
     public String toString() {
-        return String.format("%s(%d)", markType.getMarkText(), markType.getMarkNumeric());
+        return String.format("%s: %s(%d)", subject.getSubjectName(), markType.getMarkText(), markType.getMarkNumeric());
     }
 
     public MarkType getMarkType() {
@@ -42,5 +42,4 @@ public class Mark {
     private boolean isEmpty(Subject subject, Tutor tutor) {
         return subject.toString().isBlank() & tutor.toString().isBlank();
     }
-
 }

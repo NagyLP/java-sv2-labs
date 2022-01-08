@@ -34,9 +34,10 @@ public class Student {
             markPiecesSum++;
         }
         if (markAmountTotal == 0) {
-            throw new ArithmeticException("Grade must be not zero. Error data: " + markPiecesSum);
+//            throw new ArithmeticException("Grade is zero. Error data: " + markPiecesSum);
+            return 0d;
         }
-        return (double) markAmountTotal / markPiecesSum;
+        return Math.floor((double) markAmountTotal / markPiecesSum * 100) / 100;
     }
 
     public double calculateSubjectAverage(Subject subject) {
@@ -46,20 +47,24 @@ public class Student {
         double markAmuntTotal = 0;
         int markPiecesSum = 0;
         for (Mark item : marks) {
-            if (item.getSubject().getSubjectName().contains(subject.getSubjectName())) {
+            if (item.getSubject().getSubjectName().toLowerCase().contains(subject.getSubjectName())) {
                 markAmuntTotal += item.getMarkType().getMarkNumeric();
                 markPiecesSum++;
             }
         }
         if (markPiecesSum == 0) {
-            throw new ArithmeticException("No marks present, average calculation aborted!");
+//            throw new ArithmeticException("No marks present, average calculation aborted!");
+            return 0d;
         }
-        return markAmuntTotal / markPiecesSum;
+// EZT még ki kellett volna szervezni.
+        return Math.floor(markAmuntTotal / markPiecesSum * 100) / 100;
     }
 
     @Override
     public String toString() {
-        return name + " marks: " + (new Student(name).marks.toString() + MarkType.values().toString());
+// ------======= A fenti kiszervezés helyett álljon az ALÁBBI MEGOLDÁS... ==========--------------
+        return name + " marks: "
+                + marks.get(marks.indexOf(name) + 1);
     }
 
     public String getName() {
