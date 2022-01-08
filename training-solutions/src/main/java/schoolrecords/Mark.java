@@ -7,6 +7,12 @@ public class Mark {
     private final Tutor tutor;
 
     public Mark(MarkType markType, Subject subject, Tutor tutor) {
+        if (markType == null || subject == null || tutor == null) {
+            throw new NullPointerException("Both subject and tutor must be provided!");
+        }
+        if (isEmpty(subject, tutor)) {
+            throw new IllegalArgumentException("Subject/Tutor must not be empty. Error data: " + subject + "; " + tutor);
+        }
         this.markType = markType;
         this.subject = subject;
         this.tutor = tutor;
@@ -18,14 +24,7 @@ public class Mark {
 
     @Override
     public String toString() {
-        return String.format("Mark:\n Mark type: %s(%d, %s)\n subject: %s\n tutor: %s",
-                markType, markType.getMarkNumeric(), markType.getMarkText(),
-                subject.getSubjectName(),
-                tutor.getName());
-    }
-
-    private boolean isEmpty(String str) {
-        return str.isBlank();
+        return String.format("%s(%d)", markType.getMarkText(), markType.getMarkNumeric());
     }
 
     public MarkType getMarkType() {
@@ -39,4 +38,9 @@ public class Mark {
     public Tutor getTutor() {
         return tutor;
     }
+
+    private boolean isEmpty(Subject subject, Tutor tutor) {
+        return subject.toString().isBlank() & tutor.toString().isBlank();
+    }
+
 }
