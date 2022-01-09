@@ -12,7 +12,6 @@ public class RegisterDate {
         this.date = date;
     }
 
-
     public String getDescription() {
         return description;
     }
