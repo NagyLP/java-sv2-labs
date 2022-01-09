@@ -21,7 +21,12 @@ public class Tutor {
     }
 
     public boolean tutorTeachingSubject(Subject subject) {
-        return taughtSubjects.contains(subject);
+        for (Subject item : taughtSubjects) {
+            if (item.getSubjectName().contains(subject.getSubjectName())) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public String getName() {

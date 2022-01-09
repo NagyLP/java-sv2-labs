@@ -27,6 +27,8 @@ public class MarkTest {
         assertEquals(MarkType.A, mark.getMarkType());
         assertEquals(SUBJECT, mark.getSubject());
         assertEquals(TUTOR, mark.getTutor());
-        assertEquals("excellent(5)", mark.toString());
+//  (MEA culpa, Mea.maxima culpa...) JAVÍTVA: Mi célja tantárgy nélküli (amire vonatkozik a jegy)
+//  hozzárendeléssel külön, felülírt String-gé alakítani (Ha nem akarjuk megváltoztatni a TESLA autó piktogrammját, akkor miért gyártunk gyártójelzés nélkül?)
+        assertEquals("matematika: excellent(5)", mark.toString());
     }
 }

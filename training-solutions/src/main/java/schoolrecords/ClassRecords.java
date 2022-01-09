@@ -36,9 +36,9 @@ public class ClassRecords {
     }
 
     public boolean removeStudent(Student student) {
-        if (!addStudent(student)) {
-            throw new NullPointerException("Non-existent class. The class is null. Error data: " + student);
-        }
+//        if (!addStudent(student)) {
+//            throw new NullPointerException("Non-existent class. The class is null. Error data: " + student);
+//        }
         if (!students.toString().contains(student.getName())) {
             return false;
         }
@@ -69,8 +69,10 @@ public class ClassRecords {
         int classPieceOfMarks = 0;
         double classAmountOfMarks = 0;
         for (Student item : students) {
-            classAmountOfMarks += item.calculateSubjectAverage(subject);
-            classPieceOfMarks++;
+            if (item.calculateSubjectAverage(subject) > .9) {
+                classAmountOfMarks += item.calculateSubjectAverage(subject);
+                classPieceOfMarks++;
+            }
         }
         if (classAmountOfMarks == 0) {
             throw new ArithmeticException("No marks present, average calculation aborted!");
