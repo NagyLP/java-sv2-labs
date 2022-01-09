@@ -24,6 +24,7 @@ public class Pendrive {
         return this.price < other.price;
     }
 
+    @Override
     public String toString() {
         return String.format("Pendrive datas:\n" +
                 "- Name: %s\n" +

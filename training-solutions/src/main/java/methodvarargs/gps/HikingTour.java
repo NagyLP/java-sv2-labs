@@ -12,13 +12,13 @@ public class HikingTour {
         return fieldPoints;
     }
 
-    public void logFieldPoints(LocalDateTime timeOfLogging, FieldPoint... fieldPointsToLog) {
+    public void logFieldPoints(LocalDateTime timeOfLogging, FieldPoint... fieldPointsLog) {
         if (timeOfLogging == null) {
             throw new IllegalArgumentException("Time of logging must not be null!");
         }
-        for (FieldPoint f : fieldPointsToLog) {
-            f.setTimeOfLogging(timeOfLogging);
-            fieldPoints.add(f);
+        for (FieldPoint item : fieldPointsLog) {
+            item.setTimeOfLogging(timeOfLogging);
+            fieldPoints.add(item);
         }
     }
 }

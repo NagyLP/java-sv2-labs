@@ -5,18 +5,18 @@ import java.time.LocalDate;
 public class Monument {
 
     private final String name;
-    private final String adress;
-    private final LocalDate registryDate;
+    private final String address;
+    private final LocalDate dateOfRegistry;
     private final String registryNumber;
 
-    public Monument(String name, String adress, LocalDate registryDate, String registryNumber) {
-        if (name.isBlank() || adress.isBlank() || registryNumber.isBlank()) {
+    public Monument(String name, String address, LocalDate registryDate, String registryNumber) {
+        if (isBlank(name) || isBlank(address) || isBlank(registryNumber)) {
             throw new IllegalArgumentException("Name, address or registry number cannot be empty!");
         }
 
         this.name = name;
-        this.adress = adress;
-        this.registryDate = registryDate;
+        this.address = address;
+        this.dateOfRegistry = registryDate;
         this.registryNumber = registryNumber;
     }
 
@@ -28,12 +28,12 @@ public class Monument {
         return name;
     }
 
-    public String getAdress() {
-        return adress;
+    public String getAddress() {
+        return address;
     }
 
-    public LocalDate getRegistryDate() {
-        return registryDate;
+    public LocalDate getDateOfRegistry() {
+        return dateOfRegistry;
     }
 
     public String getRegistryNumber() {

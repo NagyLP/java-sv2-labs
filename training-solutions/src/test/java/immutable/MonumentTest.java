@@ -15,8 +15,8 @@ class MonumentTest {
                 LocalDate.of(2015, 2, 4), "MRN-4326-T");
 
         assertEquals("Plébániatemplom", monument.getName());
-//        assertEquals("5342 Kukutyin, Fő utca 3.", monument.getAddress());
-//        assertEquals(LocalDate.of(2015, 2, 4), monument.getDateOfRegistry());
+        assertEquals("5342 Kukutyin, Fő utca 3.", monument.getAddress());
+        assertEquals(LocalDate.of(2015, 2, 4), monument.getDateOfRegistry());
         assertEquals("MRN-4326-T", monument.getRegistryNumber());
     }
 
