@@ -37,7 +37,7 @@ public class Pendrive {
     }
 
     public double getPricePerCapacity() {
-        return price / capacity;
+        return (double) price / capacity;
     }
 
     public String getName() {
