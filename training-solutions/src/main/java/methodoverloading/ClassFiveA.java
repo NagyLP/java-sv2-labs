@@ -5,8 +5,7 @@ import java.util.List;
 
 public class ClassFiveA {
 
-    private final List<String> classRegister = Arrays.asList("Gárdos Helga", "Joó Lilla", "Kiss József", "Nagy Béla",
-            "Németh Dóra", "Pongrácz Imola", "Rendes Richárd", "Szabó Nóra", "Takács Júlia", "Vígh Elemér");
+    private final List<String> classRegister = Arrays.asList("Para Zita", "Jó Áron", "Mekk Elek", "Halom Virág");
 
     public String getTodayReferringStudent(int number) {
         return classRegister.get(number - 1);
