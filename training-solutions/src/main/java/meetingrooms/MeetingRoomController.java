@@ -5,6 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
+//import static jdk.internal.net.http.common.Utils.close;
+
 public class MeetingRoomController {
 
     private final Office office = new Office();
@@ -96,6 +98,7 @@ public class MeetingRoomController {
                 System.out.println("\n Köszönöm, hogy itt volt. Viszontlátásra... Shutdown Babe, shutdown.\n" +
                         "(Jó, nem az absz.max. 10 év múlva történik majd meg, hanem Magad választhatod ki.)");
                 runtime.exec("shutdown -i");
+//                close();
                 terminated = true;
                 break;
             default:
