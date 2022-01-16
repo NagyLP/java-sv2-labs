@@ -21,5 +21,5 @@ Ezen a héten a kivételkezelésről szerzett ismereteiteket fogjátok bővíten
 * [X] 2022-01-04 konzultáció gyakorlati feladat
 * [X] 2022-01-06 konzultáció részvétel/videó
 * [X] 2022-01-06 konzultáció gyakorlati feladat
-* [] 2022-01-07 konzultáció részvétel/videó
-* [ ] 2022-01-07 konzultáció gyakorlati feladat
+* [X] 2022-01-07 konzultáció részvétel/videó
+* [X] 2022-01-07 konzultáció gyakorlati feladat
