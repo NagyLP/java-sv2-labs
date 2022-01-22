@@ -21,6 +21,7 @@ public class Vaccination {
         List<Person> people = new ArrayList<>();
         people.add(new Person("Csevap Csilla", 99));
         people.add(new Person("Fodros Virág", 55));
+        people.add(new Person("Cserepes Virág", 44));
         people.add(new Person("Éter Péter ", 11));
 
         Vaccination vaccination = new Vaccination();
