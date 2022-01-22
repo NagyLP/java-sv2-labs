@@ -3,11 +3,16 @@ package collectionsset;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class PhysicalEducation {
 
     public Set<Integer> getOrderInLessons(List<Student> students) {
-
+        Set<Integer> orderInLesson = new TreeSet<>();
+        for (Student item : students) {
+            orderInLesson.add(item.getHeight());
+        }
+        return orderInLesson;
     }
 
 
