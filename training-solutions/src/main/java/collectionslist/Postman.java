@@ -8,7 +8,7 @@ public class Postman {
     private final List<String> addresses = new ArrayList<>();
 
     public List<String> getAddresses() {
-        return new ArrayList<>(addresses);
+        return addresses;
     }
 
     public void addAddress(String address) {
