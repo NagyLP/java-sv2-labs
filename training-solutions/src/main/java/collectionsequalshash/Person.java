@@ -27,15 +27,11 @@ public class Person {
     }
 
     @Override
-    public boolean equals(Object other) {
-        if (this == other) {
-            return true;
-        }
-        if (other == null || getClass() != other.getClass()) {
-            return false;
-        }
-        Person person = (Person) other;
-        return Objects.equals(this.ssn, person.ssn);
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return Objects.equals(this.ssn, ssn);
     }
 
     @Override
@@ -44,8 +40,8 @@ public class Person {
     }
 
     public static void main(String[] args) {
-        Person person = new Person("Kiss József", 45, "111111110");
-        Person anotherPerson = new Person("Nagy Béla", 32, "111111110");
+        Person person = new Person("John Doe", 5, "111111110");
+        Person anotherPerson = new Person("Jane Doe", 55, "111111110");
 
         System.out.println(person.equals(anotherPerson));
         System.out.println(anotherPerson.equals(person));
