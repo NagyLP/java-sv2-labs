@@ -18,3 +18,4 @@ public class Casting {
         return applicants.get(nextNumber);
     }
 }
+
