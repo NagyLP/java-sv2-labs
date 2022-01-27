@@ -1,9 +1,6 @@
 package collectionsqueue;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.PriorityQueue;
-import java.util.Queue;
+import java.util.*;
 
 public class Vaccination {
 
@@ -19,10 +16,13 @@ public class Vaccination {
 
     public static void main(String[] args) {
         List<Person> people = new ArrayList<>();
-        people.add(new Person("Csevap Csilla", 99));
-        people.add(new Person("Fodros Virág", 55));
-        people.add(new Person("Cserepes Virág", 44));
-        people.add(new Person("Éter Péter ", 11));
+        for (Person person : Arrays.asList(
+                new Person("Csevap Csilla", 99),
+                new Person("Fodros Virág", 55),
+                new Person("Cserepes Virág", 44),
+                new Person("Éter Péter ", 11))) {
+            people.add(person);
+        }
 
         Vaccination vaccination = new Vaccination();
         Queue<Integer> vaccinationOrder = vaccination.getVaccinationOrder(people);
