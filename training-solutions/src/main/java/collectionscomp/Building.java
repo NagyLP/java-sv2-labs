@@ -37,7 +37,7 @@ public class Building implements Comparable<Building> {
 
     @Override
     public int compareTo(Building other) {
-        return Integer.valueOf(levels).compareTo(other.levels);
+        return Integer.compare(levels, other.levels);
     }
 
     @Override
