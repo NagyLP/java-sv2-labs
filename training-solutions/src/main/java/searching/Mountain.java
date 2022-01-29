@@ -4,19 +4,17 @@ import java.util.Arrays;
 
 public class Mountain {
 
-    private final int[] pikeHeights;
+    private final int[] peakHeights;
 
-
-    public Mountain(int[] pikeHeights) {
-        this.pikeHeights = pikeHeights;
+    public Mountain(int[] peakHeights) {
+        this.peakHeights = peakHeights;
     }
 
-    public int[] getPikeHeights() {
-        return pikeHeights;
+    public int[] getPeakHeights() {
+        return peakHeights;
     }
 
-    public boolean searchPike(Pike pike) {
-        int height = Arrays.binarySearch(pikeHeights, pike.getHeight());
-        return height >= 0;
+    public boolean searchPike(Peak peak) {
+        return Arrays.binarySearch(peakHeights, peak.getHeight()) >= 0;
     }
 }
