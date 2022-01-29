@@ -3,7 +3,6 @@ package collectionscomp;
 public class Student {
 
     private final String name;
-
     private final int height;
 
     public Student(String name, int height) {
@@ -14,7 +13,6 @@ public class Student {
     public String getName() {
         return name;
     }
-
     public int getHeight() {
         return height;
     }

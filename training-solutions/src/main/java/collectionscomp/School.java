@@ -14,10 +14,23 @@ public class School {
 
         System.out.println(students);
 
-        Map<String, Integer> studentsOrder = new TreeMap<>(Collator.getInstance(new Locale("hu", "HU")));
-        studentsOrder.put(firstStudent.getName(), firstStudent.getHeight());
-        studentsOrder.put(secondStudent.getName(), secondStudent.getHeight());
-
-        System.out.println(studentsOrder);
+        Map<String, Integer> studentsStrIntMap = new TreeMap<>(Collator.getInstance(new Locale("hu", "HU")));
+        studentsStrIntMap.put(firstStudent.getName(), firstStudent.getHeight());
+        studentsStrIntMap.put(secondStudent.getName(), secondStudent.getHeight());
+        System.out.println(studentsStrIntMap);
     }
+//        Set<Student> students = new TreeSet<>(new StudentComparator());
+//        Student firstStudent = new Student("Erős Antónia", 100);
+//        Student secondStudent = new Student("Cérna Géza", 199);
+//        students.add(firstStudent);
+//        students.add(secondStudent);
+//
+//        System.out.println(students);
+//
+//        Map<String, Integer> studentsOrder = new TreeMap<>(Collator.getInstance(new Locale("hu", "HU")));
+//        studentsOrder.put(firstStudent.getName(), firstStudent.getHeight());
+//        studentsOrder.put(secondStudent.getName(), secondStudent.getHeight());
+//
+//        System.out.println(studentsOrder);
+//    }
 }
