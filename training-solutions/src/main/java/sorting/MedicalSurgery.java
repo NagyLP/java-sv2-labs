@@ -1,7 +1,6 @@
 package sorting;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class MedicalSurgery {
@@ -19,7 +18,8 @@ public class MedicalSurgery {
 
     public List<Patient> getPatientsInTimeOrder() {
         List<Patient> ordered = new ArrayList<>(patients);
-        Collections.sort(ordered, new PatientComparator());
+        ordered.sort(new PatientComparator());
+        //        Collections.sort(ordered, new PatientComparator());
         return ordered;
     }
 }
