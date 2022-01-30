@@ -19,7 +19,7 @@ public class CarDealer {
 
     public List<Car> getCarsOrderedByYearOfConstruction() {
         List<Car> ordered = new ArrayList<>(cars);
-        Collections.sort(ordered, new CarConstructionComparator());
+        ordered.sort(new CarConstructionComparator());
         return ordered;
     }
 
