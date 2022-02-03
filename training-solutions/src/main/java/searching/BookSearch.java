@@ -16,15 +16,27 @@ public class BookSearch {
         if (isEmpty(author) || isEmpty(title)) {
             throw new IllegalArgumentException("Author or title must not be empty!");
         }
-        Book key = new Book(author, title);
-        int index = Collections.binarySearch(books, key);
-        if (index < 0) {
+
+        int indexFundBook = Collections.binarySearch(books, new Book(author, title));
+        if (indexFundBook < 0) {
             throw new IllegalArgumentException("No book found by " + author + " with title " + title);
+        } else {
+            return books.get(indexFundBook);
         }
-        return books.get(index);
+
+//        Book key = new Book(author, title);
+//        int index = Collections.binarySearch(books, key);
+//        if (index < 0) {
+//            throw new IllegalArgumentException("No book found by " + author + " with title " + title);
+//        }
+//        return books.get(index);
     }
 
     private boolean isEmpty(String str) {
-        return str == null || "".equals(str.trim());
+        return str == null || str.isBlank();
     }
+
+//    private boolean isEmpty(String str) {
+//        return str == null || "".equals(str.trim());
+//    }
 }
