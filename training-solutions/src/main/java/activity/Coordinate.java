@@ -26,13 +26,13 @@ public class Coordinate {
     }
 
     private int validatorCorrdinates(double latitude, double longitude) {
-        if (latitude > 90 | latitude < -90 && longitude > 180 | longitude < -180) {
+        if (latitude > 90 || latitude < -90 && longitude > 180 || longitude < -180) {
             return 1;
         }
-        if (latitude > 90 | latitude < -90) {
+        if (latitude > 90 || latitude < -90) {
             return 2;
         }
-        if (longitude > 180 | longitude < -180) {
+        if (longitude > 180 || longitude < -180) {
             return 3;
         }
         return 0;
