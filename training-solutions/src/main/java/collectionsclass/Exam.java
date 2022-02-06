@@ -17,7 +17,7 @@ public class Exam {
         return new ArrayList<>(examResults);
     }
 
-    public List<String> getNameOfSuccedesPeople(int places) {
+    public List<String> getNamesOfSucceededPeople(int places) {
         List<ExamResult> ordered = new ArrayList<>(examResults);
         if (places > ordered.size()) {
             places = ordered.size();
