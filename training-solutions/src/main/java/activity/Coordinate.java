@@ -8,8 +8,8 @@ public class Coordinate {
     public Coordinate(double latitude, double longitude) {
         switch (validatorCoordinates(latitude, longitude)) {
             case 1 -> throw new IllegalArgumentException("Fatal-Total-All ERROR - data: " + latitude + longitude + "\n Na persze...");
-            case 2 -> throw new IllegalArgumentException("Syntax- ERROR -data: " + latitude + "\n(Latitude value [-90, 90])");
-            case 3 -> throw new IllegalArgumentException("Syntax- ERROR -data: " + longitude + "\n(Longitude value [-180, 180])");
+            case 2 -> throw new IllegalArgumentException("Syntax- ERROR -data: " + latitude + "\n(Latitude range [-90, 90])");
+            case 3 -> throw new IllegalArgumentException("Syntax- ERROR -data: " + longitude + "\n(Longitude range [-180, 180])");
             default -> {
                 this.latitude = latitude;
                 this.longitude = longitude;
