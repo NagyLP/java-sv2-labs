@@ -1,23 +1,23 @@
 -- SELECT * FROM orszagok
 -- WHERE orszag
 -- LIKE 'm%'
---  
---  
+
+
 -- SELECT COUNT(orszag)
 -- AS 'Találatok'
 -- FROM orszagok
 -- WHERE orszag 
 -- LIKE 'm%'
--- 
--- 
+
+
 -- SELECT orszag
 -- AS 'Találatok' 
 -- FROM orszagok
 -- WHERE orszag
 -- LIKE 'm%'
 -- ORDER BY orszag DESC;
--- 
---
+
+
 -- SELECT orszag
 -- AS 'Találat(ok) ország',
 -- terulet
@@ -33,4 +33,3 @@
 
 -- SELECT * FROM orszagok
 -- WHERE terulet = (SELECT MAX(terulet) FROM orszagok);
-
