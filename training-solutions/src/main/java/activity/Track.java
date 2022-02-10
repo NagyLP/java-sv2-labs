@@ -15,7 +15,7 @@ public class Track {
         this.trackPoint = trackPoint;
     }
 
-    public List<TrackPoint> getTrackPoint() {
+    public List<TrackPoint> getTrackPoints() {
         return trackPoint;
     }
 
@@ -73,7 +73,8 @@ public class Track {
         return new Coordinate(latitudeMax, longitudeMax);
     }
 
-//    public double getRectangleArea() {
-//        return 0;
-//    }
+    public double getRectangleArea() {
+        return (findMaximumCoordinate().getLatitude() - findMinimumCoordinate().getLatitude())
+                * (findMaximumCoordinate().getLongitude() - findMinimumCoordinate().getLongitude());
+    }
 }
