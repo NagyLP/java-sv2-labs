@@ -1,5 +1,5 @@
 -- SELECT - FROM
-
+-- 
 -- CREATE TABLE Customers (
 -- id INT,
 -- name VARCHAR(100),
@@ -9,14 +9,72 @@
 -- postal_code INT,
 -- country VARCHAR(50)
 -- );
-
-
+-- 
+-- 
 -- SELECT * FROM customers;
-
+-- 
 -- SELECT name, city FROM customers;
-
+-- 
 -- SELECT DISTINCT country FROM customers;
-
+-- 
 -- SELECT DISTINCT country AS 'Ország' FROM customers;
-
+-- 
 -- SELECT DISTINCT bela AS 'Ország' FROM customers;
+-- 
+--  WHERE - Adatok kiválasztása feltételek alapján
+-- 
+-- 
+-- CREATE TABLE Teacher (
+-- id INT NOT NULL AUTO_INCREMENT,
+-- name VARCHAR(100),
+-- position VARCHAR(50),
+-- contact VARCHAR(100),
+-- city (VARCHAR 50),
+-- PRIMARY KEY (id)
+-- );
+-- 
+
+-- CREATE TABLE Course (
+-- id INT NOT NULL AUTO_INCREMENT,
+-- name VARCHAR(50),
+-- period INT,
+-- level VARCHAR(50),
+-- price INT,
+-- PRIMARY KEY (id)
+-- );
+-- 
+-- CREATE Table Student (
+-- ID INT NOT NULL AUTO_INCREMENT,
+-- name VARCHAR (50),
+-- city VARCHAR(50),
+-- email VARCHAR(50),
+-- PRIMARY KEY(ID)
+-- );
+
+-- SELECT*FROM teacher
+-- WHERE city = 'Debrecen';
+
+-- SELECT * FROM student
+-- WHERE
+-- 		city = 'Budapest'
+-- 		AND
+-- 		email LIKE '%gmail%';
+
+
+-- SELECT * FROM teacher
+-- WHERE
+-- 	id > 1
+-- 	AND
+-- 	city = 'budapest'
+-- 	OR
+-- 	city = 'Debrecen'
+-- 	;
+
+-- SELECT * FROM student
+-- WHERE
+-- 	id > 1
+-- 	AND
+-- 	city = 'Budapest'
+-- 	OR
+-- 	city = 'Debrecen'
+
