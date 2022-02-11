@@ -103,3 +103,32 @@
 -- SELECT @diak_id := MAX(id) FROM diak;
 -- INSERT INTO diak VALUES((@diak_id + 1), 'Kiss Anna', '2010-06-06', 1);
 
+-- SELECT nev, ROUND(AVG(jegy.ertek), 1) FROM diak
+-- JOIN jegy ON diak.id = jegy.diak_id
+-- GROUP BY nev
+-- HAVING AVG(jegy.ertek) < 4;
+
+-- SELECT @diakID := MAX(id)+1 FROM diak;
+-- SELECT @diakID := (MAX(id)+1) FROM diak;
+-- 
+-- SORRENDEK !!!!!
+-- SELECT FROM
+-- JOIN
+-- GROUP BY
+-- HAVING
+-- 
+-- SELECT FROM
+-- JOIN
+-- WHERE
+-- 
+-- SET @diakID := (SELECT MAX(id)+1 FROM diak);
+
+-- ALTER TABLE diak
+-- ADD COLUMN taj VARCHAR(9);
+-- 
+-- ALTER TABLE diak
+-- MODIFY taj VARCHAR(9) CHECK (CHAR_LENGTH(taj) = 9);
+-- 
+-- INSERT INTO diak (`nev`, `szuldatum`, `naplo_id`, `TAJ`)
+-- VALUES('Kiss Anna', '2010-12-12', 1, '123456789');
+-- 
