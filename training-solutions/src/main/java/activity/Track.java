@@ -1,5 +1,15 @@
 package activity;
 
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -76,5 +86,34 @@ public class Track {
     public double getRectangleArea() {
         return (findMaximumCoordinate().getLatitude() - findMinimumCoordinate().getLatitude())
                 * (findMaximumCoordinate().getLongitude() - findMinimumCoordinate().getLongitude());
+    }
+
+    public void loadFromGpx(InputStream is) {
+        try {
+            DocumentBuilder docBuilder = DocumentBuilderFactory.newDefaultInstance().newDocumentBuilder();
+            parseDocument(docBuilder.parse(is));
+        } catch (ParserConfigurationException | SAXException | IOException loadExeptions) {
+            throw new IllegalStateException("Parsing ERROR");
+        }
+    }
+
+    private void parseDocument(Document document) {
+        NodeList nodesTrkpt = document.getElementsByTagName("trkpt");
+        NodeList nodesEle = document.getElementsByTagName("ele");
+        for (int i = 0; i < nodesTrkpt.getLength(); i++) {
+            parseTrackpointFromNode(nodesTrkpt.item(i), nodesEle.item(i));
+
+        }
+    }
+
+    private void parseTrackpointFromNode(Node nodeTrkpt, Node nodeEle) {
+        double doubleLatitude =
+                Double.parseDouble(nodeTrkpt.getAttributes().getNamedItem("lat").getTextContent());
+        double doubleLongitude =
+                Double.parseDouble(nodeTrkpt.getAttributes().getNamedItem("lon").getTextContent());
+        double doubleElevation =
+                Double.parseDouble(nodeEle.getTextContent());
+        trackPoint.add(
+                new TrackPoint(new Coordinate(doubleLatitude, doubleLongitude), doubleElevation));
     }
 }
