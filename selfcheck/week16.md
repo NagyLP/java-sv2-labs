@@ -29,9 +29,9 @@ bemutatottakat kell megcsinálni a videóval együtt!
 
 ### Összetett lekérdezések és adatmanipulációk
 
-* [ ] [INSERT - Új rekordok beszúrása az adattáblákba videó](https://e-learning.training360.com/courses/take/mariadb/lessons/10192521-insert-uj-rekordok-beszurasa-az-adattablakba)
-* [ ] [UPDATE - Az egyes rekordok frissítése videó](https://e-learning.training360.com/courses/take/mariadb/lessons/10192534-update-az-egyes-rekordok-frissitese)
-* [ ] [DELETE - Rekordok törlése videó](https://e-learning.training360.com/courses/take/mariadb/lessons/10192512-delete-rekordok-torlese)
+* [X] [INSERT - Új rekordok beszúrása az adattáblákba videó](https://e-learning.training360.com/courses/take/mariadb/lessons/10192521-insert-uj-rekordok-beszurasa-az-adattablakba)
+* [X] [UPDATE - Az egyes rekordok frissítése videó](https://e-learning.training360.com/courses/take/mariadb/lessons/10192534-update-az-egyes-rekordok-frissitese)
+* [X] [DELETE - Rekordok törlése videó](https://e-learning.training360.com/courses/take/mariadb/lessons/10192512-delete-rekordok-torlese)
 * [ ] [JOIN - Táblák összekötése videó](https://e-learning.training360.com/courses/take/mariadb/lessons/10192533-join-tablak-osszekotese)
 * [ ] [Join megvalósítása összerendelő tábla segítségével videó](https://e-learning.training360.com/courses/take/mariadb/lessons/10192535-join-megvalositasa-osszerendelo-tabla-segitsegevel)
 * [ ] [Egy tábla csatolása saját magához videó](https://e-learning.training360.com/courses/take/mariadb/lessons/10192493-egy-tabla-csatolasa-sajat-magahoz)
@@ -50,7 +50,7 @@ bemutatottakat kell megcsinálni a videóval együtt!
 * [X] 2022-02-08 konzultáció gyakorlati feladat
 * [X] 2022-02-09 konzultáció részvétel/videó
 * [X] 2022-02-09 konzultáció gyakorlati feladat
-* [ ] 2022-02-10 konzultáció részvétel/videó
-* [ ] 2022-02-10 konzultáció gyakorlati feladat
-* [ ] 2022-02-11 konzultáció részvétel/videó
-* [ ] 2022-02-11 konzultáció gyakorlati feladat
+* [X] 2022-02-10 konzultáció részvétel/videó
+* [X] 2022-02-10 konzultáció gyakorlati feladat
+* [X] 2022-02-11 konzultáció részvétel/videó
+* [X] 2022-02-11 konzultáció gyakorlati feladat
