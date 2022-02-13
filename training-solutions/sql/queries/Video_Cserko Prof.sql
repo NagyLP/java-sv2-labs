@@ -177,8 +177,22 @@ WHERE columnN LIKE pattern;
 -- 	VALUES
 -- 	(6, 'Robert Downey Jr.', 'Manhattan', 'robdow@jr.org'),
 -- 	(7, 'Jon Favreau', 'Marie Byrd-föld', 'jf@jf.com'),
--- 	(8, 'Gwyneth Paltrow', 'Északi-sark', 'gp@gp.gp');
+-- 	(8, 'Gwyneth Paltrow', 'Északi-sark', 'gp@gp.gp')
+-- ;
 -- 
--- 
--- 
--- 
+
+
+-- UPDATE - Rekordok frissítése
+ /* SÉMA
+ 
+UPDATE table_name
+SET name = 'value0', 'value1'  // Kulcs-Érték párok
+ WHERE id = 1; 					// where feltétel: Rekord azonosítója
+*/
+
+-- ALTER TABLE student
+-- ADD COLUMN ACTIVE BOOL;
+
+-- UPDATE student
+-- SET ACTIVE = 1
+-- WHERE id <= 4;
