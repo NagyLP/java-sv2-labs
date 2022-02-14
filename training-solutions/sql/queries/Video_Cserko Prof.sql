@@ -188,6 +188,7 @@ WHERE columnN LIKE pattern;
 -- 		(1);
 
 
+
 -- UPDATE - Rekordok frissítése
  /* SÉMA
  
@@ -233,6 +234,18 @@ WHERE name = 'Jancsi';
 -- 		(3),
 -- 		(1);
 
+-- INSERT INTO orders
+-- 	values
+-- 	(1, 2, 1, NOW()),
+-- 	(2, 1, 3, NOW()),
+-- 	(3, 3, 3, NOW()),
+-- 
+-- 
+-- SELECT orders.id, customers.name, order_date
+-- FROM orders
+-- 	INNER JOIN customers ON orders.customers_id = customers.id;
+-- // ahol az order.customers.id megegyezik a customer.id-vel
+
 
 
 -- JOIN megvalósítása összerendelő tábla segítségével
@@ -244,11 +257,44 @@ WHERE name = 'Jancsi';
 -- 		/// WHERE c.id = 1; 			// összes termék ami az 1 kategóriába tartozik.
 -- ORDER BY c.id DESC, p.id ASC
 -- ;
+-- // def. JOIN az INNER
+
+
+
+-- Tábla CSATOLÁSA saját magához
+-- SELECT A.name AS CustomerName1, B.name AS CustomerName2, -- A.city
+-- FROM customers A, customers B //Létrehoz kettő táblát ugyan abból...
+-- WHERE A.id <> B.id  // Egymás mellett u.a. ne szerepeljen
+-- 	AND A.city = B.city;
+
+
+
+-- MEGSZORÍTÁSOK
+
+-- ALTER TABLE products
+-- MODIFY `name` VARCHAR(100) NOT NULL CHECK (CHAR_LENGTH(`name`) > 5);
+
+-- INSERT INTO products (id, `name`) VALUES (10, 'Kapanyányimónyó');
+
+-- ALTER TABLE products
+-- MODIFY `name` VARCHAR(100) NOT NULL UNIQUE CHECK(CHAR_LENGTH(`name`)>5);
+
+
+-- // Sorrend, névvel ellátott megszorítások
+-- ALTER TABLE customers
+-- ADD CONSTRAINT unique_name_pairs UNIQUE (`name`, `contact`);
+
+-- INSERT INTO customers
+-- (`name`, contact) VALUE ('Kiss Róbert', 'Nagy Alma');
+
+-- ALTER TABLE customers
+-- DROP CONSTRAINT unique_name_pairs;
+
+
 
 
 -- AUTO_INCREMENT - Értékek automatikus növelése
---  INDEX
--- 
+
 -- CREATE TABLE Persons (
 --     ID int NOT NULL AUTO_INCREMENT,
 --     LastName varchar(255) NOT NULL,
@@ -256,11 +302,22 @@ WHERE name = 'Jancsi';
 --     Age int,
 --     PRIMARY KEY (ID)
 --  );  
+--
+-- ALTER TABLE customers
+-- MODIFY COLUMN id INT NOT NULL AUTO_INCREMENT;
+--
+
+-- ALTER TABLE student AUTO_INCREMENT=100;
+
+--  INDEX ------
+-- 
+-- CREATE INDEX name_contact  
+-- ON customers (name, contact);
 
 -- CREATE INDEX idx_pname
 -- ON Persons (LastName, FirstName);
 
--- ALTER TABLE student AUTO_INCREMENT=100;
+
 
 
 -- UNION - Táblák egyesítése
@@ -277,7 +334,27 @@ WHERE name = 'Jancsi';
 -- FROM Suppliers;
 
 
+-- SELECT city FROM customers WHERE country = 'Hungary'
+-- UNION ALL
+-- SELECT city FROM suppliers
+-- ;
 
+
+
+--  HAVING -----
+-- bizonyos bonyolutság felett nehéz az aggregált értékek alapján szűrni.
+
+-- SELECT Sz_Helye AS `Születési Hely`, COUNT(tsz) AS 'A dolg. száma'
+-- FROM employees
+-- GROUP BY Sz_Helye;
+
+-- SELECT Sz_Helye AS 'Születési Hely',
+-- 	SUM(fiz) AS 'Össz. fiz.',
+-- 	AVG(fiz) AS 'Átl. fiz.'
+-- 	FROM employees
+-- 	GROUP BY Sz_Helye
+-- 	HAVING AVG(fiz) <= 12000;  // Már összesítve a sorok, és feltétel.
+-- 
 -- SELECT Sz_Helye AS 'Születési hely',
 --      AVG (Fizetés) AS 'A dolgozók átlagfizetése'
 -- FROM Dolgozó  GROUP BY Sz_Helye HAVING AVG(Fizetés) <= 120000
