@@ -179,15 +179,24 @@ WHERE columnN LIKE pattern;
 -- 	(7, 'Jon Favreau', 'Marie Byrd-föld', 'jf@jf.com'),
 -- 	(8, 'Gwyneth Paltrow', 'Északi-sark', 'gp@gp.gp')
 -- ;
--- 
+
+-- INSERT INTO student (teacher_id)
+-- VALUES
+-- 		(1),
+-- 		(2),
+-- 		(3),
+-- 		(1);
 
 
 -- UPDATE - Rekordok frissítése
  /* SÉMA
  
 UPDATE table_name
-SET name = 'value0', 'value1'  // Kulcs-Érték párok
- WHERE id = 1; 					// where feltétel: Rekord azonosítója
+SET name = 'value0', 'value1'  // Kulcs-Érték párok, amelyre változik.
+WHERE id = 1
+; 					// where feltétel: Rekord azonosítója
+WHERE name = 'Jancsi';
+
 */
 
 -- ALTER TABLE student
@@ -195,4 +204,81 @@ SET name = 'value0', 'value1'  // Kulcs-Érték párok
 
 -- UPDATE student
 -- SET ACTIVE = 1
+-- WHERE ID < 6;   // Nyílt intervallum. 
 -- WHERE id <= 4;
+
+
+
+-- DELETE - Rekordok törlése
+
+-- DELETE FROM student
+-- WHERE id >= 6;
+
+
+
+-- JOIN - Táblák összekötése (Inner, Left, Right Full Outer JOIN)
+
+-- SELECT student.id, student.name, student.city, teacher.name, teacher.city
+-- FROM teacher 
+-- INNER JOIN student ON teacher.id = student.teacher_id
+-- ORDER BY teacher.city;
+
+-- ALTER TABLE student
+-- ADD COLUMN teacher_id INT;
+-- 
+-- INSERT INTO student (teacher_id)
+-- VALUES
+-- 		(1),
+-- 		(2),
+-- 		(3),
+-- 		(1);
+
+
+
+-- JOIN megvalósítása összerendelő tábla segítségével
+
+-- SELECT p.*
+-- FROM products p  				// alias tábla a "p" (néven)
+-- 	JOIN product_to_category ptc ON ptc.product_id = p.id
+-- 	JOIN categories c ON c.id = ptc.category_id
+-- 		/// WHERE c.id = 1; 			// összes termék ami az 1 kategóriába tartozik.
+-- ORDER BY c.id DESC, p.id ASC
+-- ;
+
+
+-- AUTO_INCREMENT - Értékek automatikus növelése
+--  INDEX
+-- 
+-- CREATE TABLE Persons (
+--     ID int NOT NULL AUTO_INCREMENT,
+--     LastName varchar(255) NOT NULL,
+--     FirstName varchar(255),
+--     Age int,
+--     PRIMARY KEY (ID)
+--  );  
+
+-- CREATE INDEX idx_pname
+-- ON Persons (LastName, FirstName);
+
+-- ALTER TABLE student AUTO_INCREMENT=100;
+
+
+-- UNION - Táblák egyesítése
+-- 
+-- SELECT column_name(s) FROM table1
+-- UNION ALL
+-- SELECT column_name(s) FROM table2;
+-- 
+
+-- SELECT 'Customer' As Type, ContactName, City, Country
+-- FROM Customers
+-- UNION
+-- SELECT 'Supplier', ContactName, City, Country
+-- FROM Suppliers;
+
+
+
+-- SELECT Sz_Helye AS 'Születési hely',
+--      AVG (Fizetés) AS 'A dolgozók átlagfizetése'
+-- FROM Dolgozó  GROUP BY Sz_Helye HAVING AVG(Fizetés) <= 120000
+
