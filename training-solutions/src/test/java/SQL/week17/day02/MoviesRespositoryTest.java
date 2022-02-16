@@ -1,6 +1,8 @@
 package SQL.week17.day02;
 
 import org.flywaydb.core.Flyway;
+import org.flywaydb.core.api.output.CleanResult;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mariadb.jdbc.MariaDbDataSource;
@@ -12,8 +14,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class MoviesRespositoryTest {
 
-    MoviesRespository moviesRespository;
-    MariaDbDataSource dataSource = new MariaDbDataSource();
+    private MoviesRespository moviesRespository;
+    private final MariaDbDataSource dataSource = new MariaDbDataSource();
 
     @BeforeEach
     void init() throws SQLException {
@@ -37,4 +39,8 @@ class MoviesRespositoryTest {
         assertEquals("[Movie: \n id: 1 \n title: 'Tanu' \n release_date: 1969-01-01]", moviesRespository.findAllMovies().toString());
     }
 
+    @AfterEach
+    void cleanTestDBase() {
+        CleanResult flyway = Flyway.configure().dataSource(dataSource).load().clean();
+    }
 }
