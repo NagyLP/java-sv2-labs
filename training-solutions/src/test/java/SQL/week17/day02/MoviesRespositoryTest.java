@@ -15,10 +15,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class MoviesRespositoryTest {
 
     private MoviesRespository moviesRespository;
-    private final MariaDbDataSource dataSource = new MariaDbDataSource();
 
     @BeforeEach
     void init() throws SQLException {
+        MariaDbDataSource dataSource = new MariaDbDataSource();
+
         dataSource.setUrl("jdbc:mariadb://localhost:3306/movies-actors?useUnicode=true");
         dataSource.setUser("***");
         dataSource.setPassword("***");
@@ -27,20 +28,19 @@ class MoviesRespositoryTest {
         // Db kiürítése és az adattartalom újra létrehozása
         flyway.clean();
         flyway.migrate();
-
     }
 
     @Test
     void testInsertThanQuery() throws SQLException {
-        MoviesRespository moviesRespository = new MoviesRespository(dataSource);
-        moviesRespository.saveMovie("Tanu", LocalDate.parse("1969-01-01"));
+//        MoviesRespository moviesRespository = new MoviesRespository(dataSource);
 //        ResultSet resultSet = dataSource.getConnection().createStatement().executeQuery("SELECT * FROM movies");
 //        Movie movie = new Movie(1, "Tanu", LocalDate.of(1969,01,01));
+        moviesRespository.saveMovie("Tanu", LocalDate.parse("1969-01-01"));
         assertEquals("[Movie: \n id: 1 \n title: 'Tanu' \n release_date: 1969-01-01]", moviesRespository.findAllMovies().toString());
     }
 
     @AfterEach
     void cleanTestDBase() {
-        CleanResult flyway = Flyway.configure().dataSource(dataSource).load().clean();
+        CleanResult flyway = Flyway.configure().load().clean();
     }
 }
