@@ -47,9 +47,9 @@ public class MoviesRespository {
                 LocalDate relaseDate = rs.getDate("release_date").toLocalDate();
                 movies.add(new Movie(id, title, relaseDate));
             }
+        } catch (SQLException sqle) {
             throw new IllegalStateException("No result");
-        } finally {
-            return movies;
         }
+        return movies;
     }
 }
