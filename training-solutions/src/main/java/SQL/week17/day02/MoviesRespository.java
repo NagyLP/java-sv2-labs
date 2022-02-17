@@ -30,8 +30,8 @@ public class MoviesRespository {
 
     // ELEGENDŐ a Statement, nem kell PrepareState..., mert nem paraméterezett)
 // Statement.setFetchSize(int rows) -> Adatmennyiség
-    public List<Movie> findAllMovies() {
-        try (ResultSet resultSet = dataSource.getConnection().createStatement().executeQuery("SELECT * FROM movies")) {
+    public List<Movie> listAllMoviesInAscend() {
+        try (ResultSet resultSet = dataSource.getConnection().createStatement().executeQuery("SELECT * FROM movies ORDER BY")) {
             return processResultSet(resultSet);
         } catch (SQLException sqle) {
             throw new IllegalStateException("Connection ERROR...", sqle);
