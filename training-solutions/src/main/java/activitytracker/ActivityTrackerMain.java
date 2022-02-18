@@ -14,17 +14,11 @@ public class ActivityTrackerMain {
 
     }
 
-    private void connectMariaDataSource() {
+    private void connectMariaDataSource() throws SQLException {
         MariaDbDataSource dataSource = new MariaDbDataSource();
-
-        try {
-            dataSource.setUrl("jdbc:mariadb://localhost:3306/movies-actors?useUnicode=true");
-            dataSource.setUser("activitytracker");
-            dataSource.setPassword("activitytracker");
-        } catch (
-                SQLException throwables) {
-            throw new IllegalStateException("Connection ERROR");
-        }
+        dataSource.setUrl("jdbc:mariadb://localhost:3306/movies-actors?useUnicode=true");
+        dataSource.setUser("activitytracker");
+        dataSource.setPassword("activitytracker");
 
         Flyway flyway = Flyway.configure().dataSource(dataSource).load();
         flyway.clean();
