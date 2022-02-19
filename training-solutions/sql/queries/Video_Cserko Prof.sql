@@ -133,7 +133,7 @@
 -- 	WHERE period = 'active'
 -- ;
 
--- SELECT--  AVG(credit) AS AvgCredit
+-- SELECT AVG(credit) AS AvgCredit
 -- 	FROM student
 -- 	WHERE city = 'budapest'
 -- ;

@@ -1,5 +1,6 @@
 package activitytracker;
 
+import javax.sql.DataSource;
 import java.sql.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -10,6 +11,7 @@ public class StatementFactory {
     private StatementFactory() {
     }
 
+    @SuppressWarnings("java:S2095")
     public static PreparedStatement getParameterizedStatement
             (Connection connection, String stringSql, Object... values)
             throws SQLException {
@@ -38,8 +40,19 @@ public class StatementFactory {
 
             } else if (parameters instanceof LocalTime time) {
                 stmt.setTime(i, Time.valueOf(time));
+
+            } else {
+                throw new IllegalArgumentException(String.format("Invalid parameter type at SQL-index %d: %s",
+                        i, parameters.getClass().getName()));
             }
         }
         return stmt;
+    }
+
+    public static Connection continuousConnection(DataSource dataSource) throws SQLException {
+        @SuppressWarnings("java:S2095")
+        Connection connection = dataSource.getConnection();
+        connection.setAutoCommit(false);
+        return connection;
     }
 }
