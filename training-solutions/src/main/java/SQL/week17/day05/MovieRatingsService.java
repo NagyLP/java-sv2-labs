@@ -1,8 +1,8 @@
 package SQL.week17.day05;
 
-import Week17.day02.MoviesRepository;
-import Week17.day04.Actor;
-import Week17.services.SqlQuery;
+import SQL.services.SqlQuery;
+import SQL.week17.day02.MoviesRepository;
+import SQL.week17.day04.Actor;
 
 import javax.sql.DataSource;
 import java.sql.PreparedStatement;

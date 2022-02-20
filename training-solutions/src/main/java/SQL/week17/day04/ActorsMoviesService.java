@@ -1,7 +1,7 @@
 package SQL.week17.day04;
 
-import Week17.day01.ActorsRepository;
-import Week17.day02.MoviesRepository;
+import SQL.week17.day01.ActorsRepository;
+import SQL.week17.day02.MoviesRepository;
 
 import java.time.LocalDate;
 import java.util.List;

@@ -1,10 +1,10 @@
 package SQL.week17.day01;
 
-import Week17.day02.MoviesRepository;
-import Week17.day04.ActorsMoviesRepository;
-import Week17.day04.ActorsMoviesService;
-import Week17.day05.MovieRatingsService;
-import Week17.day05.RatingsRepository;
+import SQL.week17.day02.MoviesRepository;
+import SQL.week17.day04.ActorsMoviesRepository;
+import SQL.week17.day04.ActorsMoviesService;
+import SQL.week17.day05.MovieRatingsService;
+import SQL.week17.day05.RatingsRepository;
 import org.flywaydb.core.Flyway;
 import org.mariadb.jdbc.MariaDbDataSource;
 

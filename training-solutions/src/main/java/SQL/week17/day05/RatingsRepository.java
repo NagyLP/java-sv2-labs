@@ -1,6 +1,7 @@
 package SQL.week17.day05;
 
-import Week17.services.SqlQuery;
+
+import SQL.services.SqlQuery;
 
 import javax.sql.DataSource;
 import java.sql.SQLException;

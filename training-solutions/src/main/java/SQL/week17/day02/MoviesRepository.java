@@ -1,6 +1,6 @@
 package SQL.week17.day02;
 
-import Week17.services.SqlQuery;
+import SQL.services.SqlQuery;
 
 import javax.sql.DataSource;
 import java.sql.*;

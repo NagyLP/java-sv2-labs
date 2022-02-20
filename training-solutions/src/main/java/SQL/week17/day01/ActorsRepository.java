@@ -1,6 +1,6 @@
 package SQL.week17.day01;
 
-import Week17.day04.Actor;
+import SQL.week17.day04.Actor;
 import org.mariadb.jdbc.Statement;
 
 import javax.sql.DataSource;
