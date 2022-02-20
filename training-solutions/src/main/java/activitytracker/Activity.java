@@ -1,20 +1,40 @@
 package activitytracker;
 
+import activity.TrackPoint;
+
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Activity {
 
-    private final long id;
+    private long id;
     private final LocalDateTime startTime;
-    private final String desc;
+    private final String description;
     private final ActivityType type;
+    private List<TrackPoint> trackPoints;
 
-    public Activity(long id, LocalDateTime startTime, String desc, ActivityType activityType) {
-        this.id = id;
+    public Activity(LocalDateTime startTime, String description, ActivityType type) {
         this.startTime = startTime;
-        this.desc = desc;
-        this.type = activityType;
+        this.description = description;
+        this.type = type;
+    }
+
+    public Activity(long id, LocalDateTime startTime, String description, ActivityType type) {
+        this(startTime, description, type);
+        this.id = id;
+    }
+
+    public Activity(LocalDateTime startTime, String description, ActivityType type, List<TrackPoint> trackPoints) {
+        this(startTime, description, type);
+        this.trackPoints = trackPoints;
+    }
+
+
+    public Activity(long id, LocalDateTime startTime, String description, ActivityType type, List<TrackPoint> trackpoints) {
+        this(id, startTime, description, type);
+        this.trackPoints = trackpoints;
     }
 
 
@@ -26,12 +46,16 @@ public class Activity {
         return startTime;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getDescription() {
+        return description;
     }
 
     public ActivityType getType() {
         return type;
+    }
+
+    public List<TrackPoint> getTrackpoints() {
+        return new ArrayList<>(trackPoints);
     }
 
     @Override
@@ -39,7 +63,7 @@ public class Activity {
         return "Activity{" +
                 "id=" + id +
                 ", startTime=" + startTime +
-                ", desc='" + desc + '\'' +
+                ", desc='" + description + '\'' +
                 ", activityType=" + type +
                 '}';
     }
@@ -51,12 +75,12 @@ public class Activity {
         Activity activity = (Activity) o;
         return id == activity.id &&
                 Objects.equals(startTime, activity.startTime) &&
-                Objects.equals(desc, activity.desc) &&
+                Objects.equals(description, activity.description) &&
                 type == activity.type;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, startTime, desc, type);
+        return Objects.hash(id, startTime, description, type);
     }
 }

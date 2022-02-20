@@ -5,18 +5,40 @@ import org.mariadb.jdbc.MariaDbDataSource;
 
 import javax.sql.DataSource;
 import java.sql.SQLException;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ActivityTrackerMain {
 
     public static void main(String[] args) {
-        ActivityTrackerMain main = new ActivityTrackerMain();
 
-        Flyway flyway = Flyway.configure().dataSource(main.connectToCleanMariaDB()).load();
-        flyway.clean();
-        flyway.migrate();
+        ActivityTrackerMain main = new ActivityTrackerMain();
+        ActivityDao activityDao = new ActivityDao(main.connectToCleanMariaDB());
+
+        Activity activityOne = new Activity(LocalDateTime.of(2022, 2, 30, 25, 69),
+                "Futás",
+                ActivityType.RUNNING);
+        Activity activityTwo = new Activity(LocalDateTime.of(2022, 2, 31, 26, 69),
+                "Túrázás",
+                ActivityType.HIKING);
+        Activity activityThere = new Activity(LocalDateTime.of(2022, 2, 32, 30, 59),
+                "Kerékpározás",
+                ActivityType.BIKING);
+        activityDao.saveActivity(activityOne);
+        activityDao.saveActivity(activityTwo);
+        activityDao.saveActivity(activityThere);
+
+        List<Activity> activities = new ArrayList<>();
+        activities.add(activityOne);
+        activities.add(activityTwo);
+        activities.add(activityThere);
+
+        activityDao.saveActivities(activities);
 
 
     }
+
 
     private DataSource connectToCleanMariaDB() {
         try {
@@ -24,6 +46,9 @@ public class ActivityTrackerMain {
             dataSource.setUrl("jdbc:mariadb://localhost:3306/movies-actors?useUnicode=true");
             dataSource.setUser("activitytracker");
             dataSource.setPassword("activitytracker");
+            Flyway flyway = Flyway.configure().dataSource(dataSource).load();
+            flyway.clean();
+            flyway.migrate();
             return dataSource;
 
         } catch (SQLException sqle) {
