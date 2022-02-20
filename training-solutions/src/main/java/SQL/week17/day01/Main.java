@@ -1,8 +1,10 @@
 package SQL.week17.day01;
 
-import SQL.week17.day02.MoviesRespository;
-import SQL.week17.day04.ActorsMoviesRepository;
-import SQL.week17.day04.ActorsMoviesService;
+import Week17.day02.MoviesRepository;
+import Week17.day04.ActorsMoviesRepository;
+import Week17.day04.ActorsMoviesService;
+import Week17.day05.MovieRatingsService;
+import Week17.day05.RatingsRepository;
 import org.flywaydb.core.Flyway;
 import org.mariadb.jdbc.MariaDbDataSource;
 
@@ -45,11 +47,32 @@ public class Main {
 */
 
         ActorsRepository actorsRepository = new ActorsRepository(dataSource);
-        MoviesRespository moviesRespository = new MoviesRespository(dataSource);
+        MoviesRepository moviesRepository = new MoviesRepository(dataSource);
         ActorsMoviesRepository actorsMoviesRepository = new ActorsMoviesRepository(dataSource);
-        ActorsMoviesService service = new ActorsMoviesService(actorsRepository, moviesRespository, actorsMoviesRepository);
+        ActorsMoviesService service = new ActorsMoviesService(actorsRepository, moviesRepository, actorsMoviesRepository);
+        RatingsRepository ratingsRepository = new RatingsRepository(dataSource);
 
-        service.insertMovieWithActors("Indul a bakterház", LocalDate.parse("1969-12-31"), List.of("Olvasztó Imre", "Koltai Róbert"));
+//        service.insertMovieWithActors("Indul a bakterház", LocalDate.parse("1969-12-31"), List.of("Olvasztó Imre", "Koltai Róbert"));
 
+        ActorsMoviesService actorsMoviesService = new ActorsMoviesService(actorsRepository, moviesRepository, actorsMoviesRepository);
+        actorsMoviesService.insertMovieWithActors("Titanic", LocalDate.parse("1997-12-11"), List.of("Leonardo DiCaprio", "Kate Winslet"));
+        actorsMoviesService.insertMovieWithActors("Great Gatsby", LocalDate.parse("2012-07-23"), List.of("Tobey Maguire", "Leonardo DiCaprio"));
+
+        MovieRatingsService movieRatingsService = new MovieRatingsService(moviesRepository, ratingsRepository);
+        movieRatingsService.addRatingsByTitle("Titanic", 5, 2);
+        try {
+            movieRatingsService.addRatingsByTitle("Great Gatsby", 1, 4, 6);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+        movieRatingsService.addRatingsByTitle("Great Gatsby", 1, 4);
+        System.out.println(movieRatingsService.getRatingsByTitle("Titanic"));
+        System.out.println(movieRatingsService.getRatingsByTitle("Great Gatsby"));
+
+        System.out.println(moviesRepository.findAllMovies());
+        System.out.println(actorsRepository.findActorByName("Leonardo DiCaprio"));
+        System.out.println(actorsRepository.findActorByName("Leonardo Di"));
+        System.out.println(actorsRepository.findActorsWithPrefix("A"));
     }
 }
+

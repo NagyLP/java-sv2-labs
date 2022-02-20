@@ -1,1 +1,20 @@
-SELECT 
+-- CREATE TABLE ratings(
+-- id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+-- movie_id BIGINT,
+-- rating INT
+-- ); 
+
+-- SELECT
+-- AVG(rating) AS 'Összes film átlagos értékelés',
+-- COUNT(rating) AS 'Összes értékelés (db)',
+-- COUNT(movie_id) AS 'Összes film ID (db)'
+-- FROM ratings
+-- ;
+-- 
+-- SELECT
+-- AVG(rating)
+-- AS valtozo
+-- FROM ratings
+-- WHERE movie_id = 1
+-- 
+-- group by movie_id;
