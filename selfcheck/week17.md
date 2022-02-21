@@ -16,7 +16,7 @@ Ezen a héten azt fogjátok megtanulni, hogyan lehet adatbázist kezelni Javabó
 * [X] [Alkalmazás architektúra videó](https://e-learning.training360.com/courses/take/adatbazis-programozas-jpa-technologiaval/lessons/30468764-alkalmazas-architektura)
 * [X] [Tesztadatok előkészítése videó](https://e-learning.training360.com/courses/take/adatbazis-programozas-jpa-technologiaval/lessons/30500444-tesztadatok-elokeszitese)
 * [x] [Generált azonosító lekérdezése videó](https://e-learning.training360.com/courses/take/adatbazis-programozas-jpa-technologiaval/lessons/30468766-generalt-azonosito-lekerdezese)
-* [ ] [Tranzakciókezelés videó](https://e-learning.training360.com/courses/take/adatbazis-programozas-jpa-technologiaval/lessons/30468767-tranzakciokezeles)
+* [X] [Tranzakciókezelés videó](https://e-learning.training360.com/courses/take/adatbazis-programozas-jpa-technologiaval/lessons/30468767-tranzakciokezeles)
 
 ## Konzultációk
 
@@ -24,7 +24,7 @@ Ezen a héten azt fogjátok megtanulni, hogyan lehet adatbázist kezelni Javabó
 * [X] 2022-02-14 konzultáció gyakorlati feladat
 * [X] 2022-02-15 konzultáció részvétel/videó
 * [X] 2022-02-15 konzultáció gyakorlati feladat
-* [ ] 2022-02-17 konzultáció részvétel/videó
-* [ ] 2022-02-17 konzultáció gyakorlati feladat
-* [ ] 2022-02-18 konzultáció részvétel/videó
-* [ ] 2022-02-18 konzultáció gyakorlati feladat
+* [X] 2022-02-17 konzultáció részvétel/videó
+* [X] 2022-02-17 konzultáció gyakorlati feladat
+* [X] 2022-02-18 konzultáció részvétel/videó
+* [X] 2022-02-18 konzultáció gyakorlati feladat
