@@ -43,7 +43,7 @@ public class ActivityDao {
             }
             throw new IllegalArgumentException("No record by ID: " + id);
         } catch (SQLException sqle) {
-            throw new IllegalStateException("UNABLE to Fetch", sqle);
+            throw new IllegalStateException("UNABLE to fetch", sqle);
         }
     }
 
@@ -58,7 +58,7 @@ public class ActivityDao {
             }
             return activities;
         } catch (SQLException sqle) {
-            throw new IllegalStateException("UNABLE to Fetch", sqle);
+            throw new IllegalStateException("UNABLE to fetch", sqle);
         }
     }
 
@@ -80,7 +80,7 @@ public class ActivityDao {
             throw new IllegalArgumentException("NO KEY" + activity);
 
         } catch (SQLException sqle) {
-            throw new IllegalStateException("UNABLE to Fetch", sqle);
+            throw new IllegalStateException("UNABLE to insert", sqle);
         }
     }
 
