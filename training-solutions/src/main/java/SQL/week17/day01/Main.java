@@ -55,24 +55,33 @@ public class Main {
 //        service.insertMovieWithActors("Indul a bakterház", LocalDate.parse("1969-12-31"), List.of("Olvasztó Imre", "Koltai Róbert"));
 
         ActorsMoviesService actorsMoviesService = new ActorsMoviesService(actorsRepository, moviesRepository, actorsMoviesRepository);
-        actorsMoviesService.insertMovieWithActors("Titanic", LocalDate.parse("1997-12-11"), List.of("Leonardo DiCaprio", "Kate Winslet"));
+        actorsMoviesService.insertMovieWithActors("Titanic", LocalDate.of(1997, 12, 11), List.of("Leonardo DiCaprio", "Kate Winslet"));
         actorsMoviesService.insertMovieWithActors("Great Gatsby", LocalDate.parse("2012-07-23"), List.of("Tobey Maguire", "Leonardo DiCaprio"));
 
         MovieRatingsService movieRatingsService = new MovieRatingsService(moviesRepository, ratingsRepository);
-        movieRatingsService.addRatingsByTitle("Titanic", 5, 2);
+
         try {
-            movieRatingsService.addRatingsByTitle("Great Gatsby", 1, 4, 6);
+            movieRatingsService.addRatingsByTitle("Great Gatsby", 6);
         } catch (IllegalArgumentException e) {
-            System.out.println(e.getMessage());
+            System.out.println(e.getMessage() + "\n");
         }
-        movieRatingsService.addRatingsByTitle("Great Gatsby", 1, 4);
-        System.out.println(movieRatingsService.getRatingsByTitle("Titanic"));
-        System.out.println(movieRatingsService.getRatingsByTitle("Great Gatsby"));
+
+        movieRatingsService.addRatingsByTitle("Titanic", 5, 4);
+        System.out.println(movieRatingsService.getRatingsByTitle("Titanic") + " Titanic");
+        movieRatingsService.addRatingsByTitle("Great Gatsby", 5, 4, 5);
+        System.out.println(movieRatingsService.getRatingsByTitle("Great Gatsby") + " Gret Gatsby");
+        System.out.println();
 
         System.out.println(moviesRepository.findAllMovies());
+        System.out.println();
+
         System.out.println(actorsRepository.findActorByName("Leonardo DiCaprio"));
         System.out.println(actorsRepository.findActorByName("Leonardo Di"));
-        System.out.println(actorsRepository.findActorsWithPrefix("A"));
+        System.out.println(actorsRepository.findActorsWithPrefix("L"));
+        System.out.println();
+
+        System.out.println(movieRatingsService.getAverageRatingById(1) + "\n");
+        System.out.println(movieRatingsService.getAverageRatingById(2));
     }
 }
 

@@ -1,6 +1,6 @@
 package SQL.week17.day02;
 
-import SQL.services.SqlQuery;
+import SQL.week17.services.SqlQuery;
 
 import javax.sql.DataSource;
 import java.sql.*;
@@ -21,8 +21,8 @@ public class MoviesRepository {
         try (SqlQuery query = new SqlQuery(dataSource.getConnection())) {
             query.setPreparedStatement(query.connection()
                     .prepareStatement("SELECT id" +
-                            "FROM movies" +
-                            "WHERE title = ?;"));
+                            " FROM movies" +
+                            " WHERE title = ?;"));
             query.preparedStatement().setString(1, title);
             query.setResult(query.preparedStatement().executeQuery());
 

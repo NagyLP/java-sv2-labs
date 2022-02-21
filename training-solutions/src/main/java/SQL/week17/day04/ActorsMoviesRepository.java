@@ -17,11 +17,12 @@ public class ActorsMoviesRepository {
     public void insertActorAndMovieId(long actorId, long movieId) {
         try (Connection conn = dataSource.getConnection();
              PreparedStatement stmt =
-                     conn.prepareStatement("INSERT INTO actors_movies(actorId, movieId)" +
-                             "values(?,?)")) {
+                     conn.prepareStatement("INSERT INTO" +
+                             " actors_movies(actor_id,movie_id) " +
+                             " VALUES (?,?);")) {
             stmt.setLong(1, actorId);
             stmt.setLong(2, movieId);
-            stmt.execute();
+            stmt.executeUpdate();
 
         } catch (SQLException sqle) {
             throw new IllegalStateException("Insert ERROR");
