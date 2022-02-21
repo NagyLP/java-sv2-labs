@@ -62,6 +62,28 @@ public class ActivityDao {
         }
     }
 
+    public Activity saveActivityAndReturnGeneratedKeys(Activity activity) {
+        try (SqlQuery query = new SqlQuery(dataSource.getConnection())) {
+            query.setPreparedStatement(query.connection().prepareStatement(
+                    "INSERT INTO activities" +
+                            "(start_time, description, activity_type)" +
+                            "VALUES (?,?,?);", Statement.RETURN_GENERATED_KEYS));
+
+            setPreparedStatement(activity, query.preparedStatement());
+            query.preparedStatement().executeLargeUpdate();
+            query.setResult(query.preparedStatement().getGeneratedKeys());
+
+            if (query.result().next()) {
+                long id = query.result().getLong(1);
+                return findActivityById(id);
+            }
+            throw new IllegalArgumentException("NO KEY" + activity);
+
+        } catch (SQLException sqle) {
+            throw new IllegalStateException("UNABLE to Fetch", sqle);
+        }
+    }
+
     private Activity createActivityFromResultSet(ResultSet rs) throws SQLException {
         return new Activity(
                 rs.getLong("id"),
@@ -75,7 +97,5 @@ public class ActivityDao {
         stmt.setString(2, activity.getDescription());
         stmt.setString(3, activity.getType().toString());
     }
-
-    public Activity saveActivityAndReturnGeneratedKeys(Activity activity) {
-    }
 }
+
