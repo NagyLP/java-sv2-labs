@@ -1,8 +1,5 @@
 package activitytracker_jdbc;
 
-import activity.TrackPoint;
-import activitytracker.ActivityType;
-
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Objects;
