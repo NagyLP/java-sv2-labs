@@ -3,7 +3,6 @@ package activitytracker;
 import org.flywaydb.core.Flyway;
 import org.mariadb.jdbc.MariaDbDataSource;
 
-import javax.sql.DataSource;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -25,7 +24,7 @@ public class ActivityTrackerMain {
         Activity activityThere = new Activity(LocalDateTime.of(2022, 2, 32, 30, 59),
                 "Kerékpározás",
                 ActivityType.BIKING);
-        MariaDbDataSource dataSource = new MariaDbDataSource();
+//        MariaDbDataSource dataSource = new MariaDbDataSource();
         activityDao.saveActivity(activityOne);
         activityDao.saveActivity(activityTwo);
         activityDao.saveActivity(activityThere);
@@ -41,7 +40,7 @@ public class ActivityTrackerMain {
     }
 
 
-    private DataSource connectToCleanMariaDB() {
+    private MariaDbDataSource connectToCleanMariaDB() {
         MariaDbDataSource dataSource = new MariaDbDataSource();
         try {
             dataSource.setUrl("jdbc:mariadb://localhost:3306/movies-actors?useUnicode=true");
