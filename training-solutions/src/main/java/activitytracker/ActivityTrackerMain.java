@@ -12,8 +12,8 @@ import java.util.List;
 public class ActivityTrackerMain {
 
     public static void main(String[] args) {
-
         ActivityTrackerMain main = new ActivityTrackerMain();
+
         ActivityDao activityDao = new ActivityDao(main.connectToCleanMariaDB());
 
         Activity activityOne = new Activity(LocalDateTime.of(2022, 2, 30, 25, 69),
@@ -25,6 +25,7 @@ public class ActivityTrackerMain {
         Activity activityThere = new Activity(LocalDateTime.of(2022, 2, 32, 30, 59),
                 "Kerékpározás",
                 ActivityType.BIKING);
+        MariaDbDataSource dataSource = new MariaDbDataSource();
         activityDao.saveActivity(activityOne);
         activityDao.saveActivity(activityTwo);
         activityDao.saveActivity(activityThere);
@@ -41,8 +42,8 @@ public class ActivityTrackerMain {
 
 
     private DataSource connectToCleanMariaDB() {
+        MariaDbDataSource dataSource = new MariaDbDataSource();
         try {
-            MariaDbDataSource dataSource = new MariaDbDataSource();
             dataSource.setUrl("jdbc:mariadb://localhost:3306/movies-actors?useUnicode=true");
             dataSource.setUser("activitytracker");
             dataSource.setPassword("activitytracker");

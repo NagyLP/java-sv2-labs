@@ -1,19 +1,20 @@
 package activitytracker;
 
 import SQL.services.SqlQuery;
+import org.mariadb.jdbc.MariaDbDataSource;
 
-import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ActivityDao {
 
-    private final DataSource dataSource;
+    private final MariaDbDataSource dataSource;
 
-    public ActivityDao(DataSource dataSource) {
+    public ActivityDao(MariaDbDataSource dataSource) {
         this.dataSource = dataSource;
     }
+
 
     public void saveActivity(Activity activity) {
         try (Connection connection = dataSource.getConnection();
@@ -75,6 +76,8 @@ public class ActivityDao {
 
             if (query.result().next()) {
                 long id = query.result().getLong(1);
+                TrackPointDao trackPointDao = new TrackPointDao(dataSource);
+                trackPointDao.insertTrackPoints(activity.getTrackpoints(), id);
                 return findActivityById(id);
             }
             throw new IllegalArgumentException("NO KEY" + activity);

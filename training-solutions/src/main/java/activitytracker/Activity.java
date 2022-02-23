@@ -54,7 +54,7 @@ public class Activity {
         return type;
     }
 
-    public List<TrackPoint> getTrackpoints() {
+    public List<activitytracker.TrackPoint> getTrackpoints() {
         return new ArrayList<>(trackPoints);
     }
 

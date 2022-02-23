@@ -1,5 +1,4 @@
-create TABLE IF NOT EXISTS activities
-(
+create TABLE IF NOT EXISTS activities(
 id BIGINT NOT_NULL AUTO_INCREMENT PRIMARY KEY,
 start_time DATETIME,
 activity_desc VARCHAR(255),
