@@ -1,7 +1,8 @@
-create TABLE track_point(
+CREATE TABLE track_points(
 id BIGINT,
 tp_time DATE,
 lat DOUBLE,
 lon DOUBLE,
-FOREIGN KEY (id) REFERENCES activities(id)
+activity_id BIGINT,
+FOREIGN KEY (activity_id) REFERENCES activities(id)
 );

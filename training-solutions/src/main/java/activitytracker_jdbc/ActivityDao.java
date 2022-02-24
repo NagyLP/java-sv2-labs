@@ -18,6 +18,19 @@ public class ActivityDao {
         this.trackPointDao = new TrackPointDao(dataSource);
     }
 
+    public void saveActivities(List<Activity> activities) {
+        for (Activity activity : activities) {
+            jdbcTemp.update(
+                    "INSERT INTO" +
+                            " activities(start_time,activity_desc,activity_type)" +
+                            " VALUES(?,?,?);",
+                    Timestamp.valueOf(activity.getStartTime()),
+                    activity.getDescription(),
+                    activity.getType().name()
+            );
+        }
+    }
+
     public Activity saveActivityAndKeyBack(Activity activity) {
         KeyHolder keyHolder = new GeneratedKeyHolder();
         jdbcTemp.update(con -> createPreparedStatement(con, activity), keyHolder);
@@ -28,6 +41,7 @@ public class ActivityDao {
         return getActivityById(key.longValue());
     }
 
+
     public List<Activity> listActivities() {
         return jdbcTemp.query(
                 "SELECT * FROM" +
@@ -35,7 +49,7 @@ public class ActivityDao {
                 this::createActivity);
     }
 
-    private Activity getActivityById(long id) {
+    public Activity getActivityById(long id) {
         return jdbcTemp.queryForObject(
                 "SELECT * FROM activities" +
                         " WHERE id = ?;",
@@ -65,4 +79,5 @@ public class ActivityDao {
                 trackPointDao.listTrackPointsByActivityId(rs.getLong("id"))
         );
     }
+
 }
