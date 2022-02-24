@@ -20,7 +20,7 @@ public class ActivityDao {
         try (Connection connection = dataSource.getConnection();
              PreparedStatement stmt = connection.prepareStatement(
                      "INSERT INTO activities" +
-                             "(start_time, description, activity_type)" +
+                             "(start_time,activity_desc,activity_type)" +
                              "VALUES (?, ?, ?);")) {
             setPreparedStatement(activity, stmt);
             stmt.executeUpdate();
@@ -67,7 +67,7 @@ public class ActivityDao {
         try (SqlQuery query = new SqlQuery(dataSource.getConnection())) {
             query.setPreparedStatement(query.connection().prepareStatement(
                     "INSERT INTO activities" +
-                            "(start_time, description, activity_type)" +
+                            "(start_time,activity_desc,activity_type)" +
                             "VALUES (?,?,?);", Statement.RETURN_GENERATED_KEYS));
 
             setPreparedStatement(activity, query.preparedStatement());
@@ -91,14 +91,14 @@ public class ActivityDao {
         return new Activity(
                 rs.getLong("id"),
                 rs.getTimestamp("start_time").toLocalDateTime(),
-                rs.getString("description"),
+                rs.getString("activity_desc"),
                 ActivityType.valueOf(rs.getString("activity_type")));
     }
 
     private void setPreparedStatement(Activity activity, PreparedStatement stmt) throws SQLException {
         stmt.setTimestamp(1, Timestamp.valueOf(activity.getStartTime()));
         stmt.setString(2, activity.getDescription());
-        stmt.setString(3, activity.getType().toString());
+        stmt.setString(3, activity.getType().name());
     }
 }
 
