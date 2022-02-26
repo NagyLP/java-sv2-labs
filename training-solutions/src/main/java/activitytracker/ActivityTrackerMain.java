@@ -36,9 +36,8 @@ public class ActivityTrackerMain {
 
         activityDao.saveActivities(activities);
 
-
+        System.out.println();
     }
-
 
     private MariaDbDataSource connectToCleanMariaDB() {
         MariaDbDataSource dataSource = new MariaDbDataSource();
