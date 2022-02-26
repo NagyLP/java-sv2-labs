@@ -33,15 +33,15 @@ public class Kennel {
                         -> new IllegalArgumentException("Not fund dog whith Name: " + name));
     }
 
-    public Dog findByNameClassic(String name) {
-        for (Dog dog : dogs) {
-            if (dog.getName().equals(name)) {
-                return dog;
-            }
-        }
-        throw new IllegalArgumentException
-                ("Not fund dog with name: " + name);
-    }
+//    public Dog findByNameClassic(String name) {
+//        for (Dog dog : dogs) {
+//            if (dog.getName().equals(name)) {
+//                return dog;
+//            }
+//        }
+//        throw new IllegalArgumentException
+//                ("Not fund dog with name: " + name);
+//    }
 
     public void playWith(String name, int hours) {
         this.findByName(name).play(hours);
@@ -57,4 +57,10 @@ public class Kennel {
         return happyDogNames;
     }
 
+//    public List<String> dogsStream(int minHappiness) {
+//        return dogs.stream()
+//                .filter(dog -> dog.getHappiness() > minHappiness)
+//                .map(Dog::getName)
+//                .collect(Collectors.toList());
+//    }
 }
