@@ -34,4 +34,17 @@ public class WorkHours {
         }
         return minWorkEmployeeAndDate;
     }
+
+//    ublic String minWork(String path) {
+//        try (Stream<String> lines = Files.lines(Path.of(path)))
+//        {
+//            WorkHour minWorkHour = lines
+//                    .map(WorkHour::parseLine)
+//                    .min(Comparator.comparing(WorkHour::getHours))
+//                    .orElseThrow(() -> new IllegalArgumentException("No data"));
+//            return minWorkHour.toExpectedString();
+//        }
+//        catch (IOException ioe) {
+//            throw new IllegalArgumentException("Can not read files", ioe);
+//        }
 }
