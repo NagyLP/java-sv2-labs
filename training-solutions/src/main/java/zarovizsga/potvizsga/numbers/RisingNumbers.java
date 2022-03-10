@@ -4,10 +4,10 @@ import java.util.List;
 
 public class RisingNumbers {
 
-    public int getNumberOfSixDigitRisingNumbers(List<Integer> numbers) {
-        validateListIsBlank(numbers);
-        validateNumber
-    }
+//    public int getNumberOfSixDigitRisingNumbers(List<Integer> numbers) {
+//        validateListIsBlank(numbers);
+//        validateNumber
+//    }
 
     private void validateListIsBlank(List<Integer> numbers) {
         if (numbers == null) {
