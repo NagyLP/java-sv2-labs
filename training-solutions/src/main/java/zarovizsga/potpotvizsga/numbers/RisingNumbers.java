@@ -7,7 +7,7 @@ public class RisingNumbers {
 
     public int getNumberOfSixDigitRisingNumbers(List<Integer> numbers) {
         validateListIsBlank(numbers);
-
+        return 0;
     }
 
     // JCF -Keretrendszer- Kollekciók
