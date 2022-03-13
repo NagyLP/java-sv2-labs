@@ -1,15 +1,15 @@
-//package zarovizsga.potvizsga.bistros;
-//
-//import org.junit.jupiter.api.Test;
-//
-//import static org.junit.jupiter.api.Assertions.*;
-//
-//class MenuItemTypeTest {
-//
-//    @Test
-//    void getTaxTest(){
-//        assertEquals(27, MenuItemType.DRINK.getTax());
-//        assertEquals(20, MenuItemType.FOOD.getTax());
-//    }
-//
-//}
+package zarovizsga.potpotvizsga.bistros;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+class MenuItemTypeTest {
+
+    @Test
+    void getTaxTest() {
+        assertEquals(27, MenuItemType.DRINK.getTax());
+        assertEquals(20, MenuItemType.FOOD.getTax());
+    }
+
+}
