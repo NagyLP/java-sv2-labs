@@ -2,6 +2,15 @@ package A_Training;
 
 public class Main {
 
+//    static int b, h;
+//
+//    static {
+//        try (Scanner scan = new Scanner(System.in)) {
+//            b = scan.nextInt();
+//            h = scan.nextInt();
+//        }
+//    }
+
     public static void main(String[] args) {
 //        Scanner scanIn = new Scanner(System.in);
 //
@@ -78,6 +87,32 @@ public class Main {
 //                        String.format(
 //                                "%d %s", count, scan.nextLine()));
 //            }
+//        }
+
+//        if (!(b > 0) || !(h > 0)) {
+//            System.out.println("java.lang.Exception: Breadth and height must be positive");
+//        } else {
+//            System.out.println(b * h);
+//        }
+//        System.exit(0);
+
+//        try (Scanner scan = new Scanner(System.in)) {
+//            int number = scan.nextInt();
+//            Main main = new Main();
+//            main.validatorOfInput(number);
+//            String str = String.valueOf(number);
+//
+//            if (number == Integer.parseInt(str)) {
+//                System.out.println("Good job");
+//            }
+//            else {System.out.println("Wrong answer.");
+//            }
+//        }
+//    }
+//
+//    private void validatorOfInput(int number) {
+//        if (!(number >= -100) || !(number <= 100)) {
+//            System.out.println("Out of range.");
 //        }
 
     }
