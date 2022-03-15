@@ -115,6 +115,42 @@ public class Main {
 //            System.out.println("Out of range.");
 //        }
 
+
+//        public static String findDay ( int month, int day, int year) {
+//            Calendar calendar = Calendar.getInstance();
+//            calendar.set(Calendar.MONTH, month-1);
+//            calendar.set(Calendar.DAY_OF_MONTH, day);
+//            calendar.set(Calendar.YEAR, year);
+//            return calendar.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.US).toUpperCase();
+//        }
+
+//        try (Scanner scan = new Scanner(System.in)) {
+//            double payment = scan.nextDouble();
+//
+//            System.out.println(
+//                    "US: " + NumberFormat.getCurrencyInstance(Locale.US).format(payment));
+//            System.out.println(
+//                    "India: " + NumberFormat.getCurrencyInstance(new Locale("en", "India: ")).format(payment));
+//            System.out.println(
+//                    "China: " + NumberFormat.getCurrencyInstance(Locale.CHINA).format(payment));
+//            System.out.println(
+//                    "France: " + NumberFormat.getCurrencyInstance(Locale.FRANCE).format(payment));
+//        }
+//
+//        Scanner scanner = new Scanner(System.in);
+//        double payment = scanner.nextDouble();
+//        scanner.close();
+//
+//        NumberFormat us = NumberFormat.getCurrencyInstance(Locale.US);
+//        NumberFormat india = NumberFormat.getCurrencyInstance(new Locale("en", "IN"));
+//        NumberFormat china = NumberFormat.getCurrencyInstance(Locale.CHINA);
+//        NumberFormat france = NumberFormat.getCurrencyInstance(Locale.FRANCE);
+//
+//        System.out.println("US: " + us.format(payment));
+//        System.out.println("India: " + india.format(payment));
+//        System.out.println("China: " + china.format(payment));
+//        System.out.println("France: " + france.format(payment));
+
     }
 }
 
