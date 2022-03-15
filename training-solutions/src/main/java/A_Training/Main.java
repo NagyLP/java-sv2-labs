@@ -46,26 +46,39 @@ public class Main {
 
 //        Scanner scan = new Scanner(System.in);
 //        int data = scan.nextInt();
+//
 //        for (int i = 0; i < data; i++) {
 //            try {
-//                if (data >= Byte.MIN_VALUE
-//                        && data <= Byte.MAX_VALUE)
+//                long inputNumber = scan.nextLong();
+//                System.out.println(inputNumber + " can be fitted in:");
+//                if (inputNumber >= Byte.MIN_VALUE
+//                        && inputNumber <= Byte.MAX_VALUE)
 //                    System.out.println("* byte");
-//                if (data >= Short.MIN_VALUE
-//                        && data <= Short.MAX_VALUE)
+//                if (inputNumber >= Short.MIN_VALUE
+//                        && inputNumber <= Short.MAX_VALUE) {
 //                    System.out.println("* short");
-//                if (data >= Integer.MIN_VALUE
-//                        && data <= Integer.MAX_VALUE)
+//                }
+//                if (inputNumber >= Integer.MIN_VALUE
+//                        && inputNumber <= Integer.MAX_VALUE)
 //                    System.out.println("* int");
-//                if (data >= (Long.MIN_VALUE)
-//                        && data <= (Math.pow(2, 63) - 1))
+//                if (inputNumber >= (Long.MIN_VALUE)
+//                        && inputNumber <= (Math.pow(2, 63) - 1))
 //                    System.out.println("* long");
 //
 //            } catch (Exception ioe) {
-//                System.out.println(scan.next() + " can be fitted in:");
+//                System.out.println(scan.next() + " can't be fitted anywhere.");
 //            }
 //        }
 
+//        try (Scanner scan = new Scanner(System.in)) {
+//            int count = 0;
+//            while (scan.hasNextLine()) {
+//                count++;
+//                System.out.println(
+//                        String.format(
+//                                "%d %s", count, scan.nextLine()));
+//            }
+//        }
 
     }
 }
