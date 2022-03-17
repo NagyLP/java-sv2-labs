@@ -74,24 +74,24 @@ class CityTest {
 
     }
 
-//    @Test
-//    void testFindBistroByAddress(){
-//
-//        assertEquals("Cool bistro", city.findBistroByAddress(new Address("Rákóczi",18)).getName());
-//        assertEquals("Best bar (Only Drinks)", city.findBistroByAddress(new Address("Kossuth",19)).getName());
-//    }
-//
-//    @Test
-//    void testFindLongestMenu(){
-//        assertEquals("Best bistro",city.findLongestMenu().getName());
-//    }
-//
-//    @Test
-//    void testFindBistroWithMenuItem(){
-//        assertEquals(List.of("Best bistro","Good bistro","Cool bistro"),city.findBistroWithMenuItem("Chicken").stream().map(Bistro::getName).toList());
-//        assertEquals(List.of("Best bistro","Cool bistro","Best bar (Only Drinks)"),
-//                city.findBistroWithMenuItem("Beer").stream().map(Bistro::getName).toList());
-//
-//    }
+    @Test
+    void testFindBistroByAddress(){
+
+        assertEquals("Cool bistro", city.findBistroByAddress(new Address("Rákóczi",18)).getName());
+        assertEquals("Best bar (Only Drinks)", city.findBistroByAddress(new Address("Kossuth",19)).getName());
+    }
+
+    @Test
+    void testFindLongestMenu(){
+        assertEquals("Best bistro",city.findLongestMenu().getName());
+    }
+
+    @Test
+    void testFindBistroWithMenuItem(){
+        assertEquals(List.of("Best bistro","Good bistro","Cool bistro"),city.findBistroWithMenuItem("Chicken").stream().map(Bistro::getName).toList());
+        assertEquals(List.of("Best bistro","Cool bistro","Best bar (Only Drinks)"),
+                city.findBistroWithMenuItem("Beer").stream().map(Bistro::getName).toList());
+
+    }
 
 }
