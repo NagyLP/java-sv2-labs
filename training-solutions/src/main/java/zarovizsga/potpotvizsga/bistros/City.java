@@ -1,6 +1,7 @@
 package zarovizsga.potpotvizsga.bistros;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class City {
@@ -16,6 +17,21 @@ public class City {
     }
 
     public Bistro findBistroByAddress(Address address) {
+        return bistros.stream()
+                .filter(bistro -> bistro.getAddress().equals(address))
+                .findFirst().orElseThrow(
+                        () -> new IllegalArgumentException("Not find Bistro! Adress: " + address));
+    }
 
+    public Bistro findLongestMenu() {
+        return bistros.stream()
+                .sorted(Comparator.comparingInt((Bistro bistro) -> bistro.getMenu().size()).reversed())
+                .findFirst().orElseThrow(() -> new IllegalArgumentException("Not find menu! Bistros: " + bistros));
+    }
+
+    public List<Bistro> findBistroWithMenuItem(String menuItem) {
+        return bistros.stream()
+                .filter(bistro -> bistro.
+                        .toList();
     }
 }
