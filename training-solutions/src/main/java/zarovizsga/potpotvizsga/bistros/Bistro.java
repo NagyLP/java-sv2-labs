@@ -31,6 +31,15 @@ public class Bistro {
         menu.add(menuItem);
     }
 
+    public boolean menuContainsItemByName(String menuItemName) {
+        for (MenuItem menuItem : menu) {
+            if (menuItem.getName().equals(menuItemName)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

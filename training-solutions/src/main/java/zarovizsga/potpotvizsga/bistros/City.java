@@ -29,9 +29,16 @@ public class City {
                 .findFirst().orElseThrow(() -> new IllegalArgumentException("Not find menu! Bistros: " + bistros));
     }
 
-    public List<Bistro> findBistroWithMenuItem(String menuItem) {
-        return bistros.stream()
-                .filter(bistro -> bistro.
-                        .toList();
+    public List<Bistro> findBistroWithMenuItem(String menuItemName) {
+        List<Bistro> list = new ArrayList<>();
+        for (Bistro b : bistros) {
+            if (b.menuContainsItemByName(menuItemName)) {
+                list.add(b);
+            }
+        }
+        return list;
     }
+//        return bistros.stream()
+//                .filter(b -> b.menuContainsItemByName(menuItemName))
+//                .toList();
 }
