@@ -1,4 +1,4 @@
-//package zarovizsga.potvizsga.settlers;
+//package zarovizsga.potpotvizsga.settlers;
 //
 //import org.junit.jupiter.api.Test;
 //
