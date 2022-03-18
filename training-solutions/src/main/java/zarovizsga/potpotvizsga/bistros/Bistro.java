@@ -38,6 +38,8 @@ public class Bistro {
             }
         }
         return false;
+//        return menu.stream()
+//                .anyMatch(m->m.getName().equals(menuItemName));
     }
 
     @Override
