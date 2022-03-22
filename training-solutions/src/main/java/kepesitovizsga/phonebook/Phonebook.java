@@ -14,10 +14,8 @@ public class Phonebook {
         if (contacts == null || output == null) {
             throw new IllegalArgumentException("Contacts OR Output is null.");
         }
-
         try {
             Files.write(Path.of(output), entryFromLine(contacts));
-
         } catch (IOException ioe) {
             throw new IllegalStateException("Cant write file." + ioe);
         }
