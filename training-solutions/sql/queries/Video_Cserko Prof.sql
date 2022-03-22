@@ -358,4 +358,3 @@ WHERE name = 'Jancsi';
 -- SELECT Sz_Helye AS 'Születési hely',
 --      AVG (Fizetés) AS 'A dolgozók átlagfizetése'
 -- FROM Dolgozó  GROUP BY Sz_Helye HAVING AVG(Fizetés) <= 120000
-
