@@ -165,7 +165,17 @@ public class Main {
 //        } catch (NoSuchAlgorithmException nsae) {
 //            nsae.printStackTrace();
 //        }
-//    }
+
+//        try (Scanner input = new Scanner(System.in)) {
+//            MessageDigest messageDigest = MessageDigest.getInstance("MD5");
+//            messageDigest.reset();
+//            messageDigest.update(input.nextLine().getBytes());
+//            for (byte item : messageDigest.digest()) {
+//                System.out.print(String.format("%02x", item));
+//            }
+//        } catch (NoSuchAlgorithmException nsae) {
+//            nsae.printStackTrace();
+//        }
 
 
     }
