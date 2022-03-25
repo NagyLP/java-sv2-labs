@@ -1,5 +1,9 @@
 package A_Training;
 
+//import java.security.MessageDigest;
+//import java.security.NoSuchAlgorithmException;
+//import java.util.Scanner;
+
 public class Main {
 
 //    static int b, h;
@@ -151,6 +155,18 @@ public class Main {
 //        System.out.println("China: " + china.format(payment));
 //        System.out.println("France: " + france.format(payment));
 
+//        try (Scanner input = new Scanner(System.in)) {
+//            MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
+//            messageDigest.reset();
+//            messageDigest.update(input.nextLine().getBytes());
+//            for (byte item : messageDigest.digest()) {
+//                System.out.print(String.format("%02x", item));
+//            }
+//        } catch (NoSuchAlgorithmException nsae) {
+//            nsae.printStackTrace();
+//        }
+//    }
+
+
     }
 }
-
