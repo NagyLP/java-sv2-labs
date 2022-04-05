@@ -177,5 +177,39 @@ public class Main {
 //            nsae.printStackTrace();
 //        }
 
+//        public PerformOperation isOdd () {
+//            return (a) -> {
+//                return (a % 2 == 1);
+//            };
+//        }
+//        public PerformOperation isPrime () {
+//            return (a) -> {
+//                for (int i = 2; i <= a / 2; i++) {
+//                    if (a % i == 0)
+//                        return false;
+//                }
+//                return true;
+//            };
+//        }
+//
+//        public boolean checkPalindrome(String str, int s, int e)
+//        {
+//            if (s == e)    // If there is only one character
+//                return true;
+//            // If first and last characters do not match
+//            if ((str.charAt(s)) != (str.charAt(e)))
+//                return false;
+//            // If there are multiple characters, check if
+//            // middle substring is also palindrome or not.
+//            if (s < e + 1)
+//                return checkPalindrome(str, s + 1, e - 1);
+//            return true;
+//        }
+
+//        public static int összeadás(List<Integer> ar) {
+//            return ar.stream().mapToInt(Integer::intValue).sum();
+//        }
+
+
     }
 }
